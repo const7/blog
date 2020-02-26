@@ -1,0 +1,49 @@
+# Site settings
+title:          const
+description:    "Blog about study and life."
+baseurl:        ""
+url:            "https://chenkun.pro"
+
+# 菜单
+menu:
+  - title: Home
+    url: /
+  - title: Categories
+    url: /categories
+  - title: Wiki
+    url: /wiki
+  - title: About
+    url: /about
+
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Permalinks
+permalink:      /posts/:year/:month/:day/:title.html
+
+# 10 posts per page
+paginate:       10
+
+exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock']
+
+# compress html code
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# compress sass code
+sass:
+  sass_dir:     /sass
+  style:        compressed

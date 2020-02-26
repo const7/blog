@@ -1,0 +1,13 @@
+<nav class="nav">
+  <div class="nav-container">
+    <a href="{{ site.baseurl }}/">
+      <h2 class="nav-title">{{ site.title }}</h2>
+    </a>
+    <ul>
+      {% for menu in site.menu -%}
+        <li><a href="{{ site.baseurl }}{{ menu.url }}">{{ menu.title }}</a></li>
+      {% endfor -%}
+      <li><a href="{{ site.domainUrl | append: site.baseurl }}/assets/xml/rss.xml">RSS</a></li>
+    </ul>
+  </div>
+</nav>

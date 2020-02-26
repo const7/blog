@@ -1,0 +1,50 @@
+// Colors
+$default-color: #555;
+$default-shade: #353535;
+$default-tint: #aaa;
+$grey: #e5e5e5;
+$link-color: rgb(2, 218, 218);
+$shadow-color: rgba(0, 0, 0, .2);
+
+// Fonts
+$serif-primary: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+$serif-secondary: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
+
+/////////////////////////////////////////////////////////// from cayman theme ///////////////////////////////
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: #fff !default;
+$header-bg-color: #159957 !default;
+$header-bg-color-secondary: #155799 !default;
+
+// Text
+$section-headings-color: #159957 !default;
+$body-text-color: #333 !default;
+$body-link-color: #1e6bb8 !default;
+$body-background-color: #ffffff !default;
+$blockquote-text-color: #819198 !default;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #567482 !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;

@@ -1,0 +1,51 @@
+.categories-list {
+  line-height: 2;
+  color: #555;
+  list-style-type:disc;
+  font-family: $serif-primary;
+
+  a:hover {
+    text-decoration: none;
+    color: $body-link-color;
+  }
+
+  &-item {
+    border-bottom: 1px dashed #ccc;
+    margin: 10px;
+    padding: 0;
+
+    a {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: inherit;
+      color: $default-color;
+    }
+  }
+
+  &-meta {
+    font-size: 12px;
+    line-height: 2;
+    color: #555;
+    background: #fff;
+  }
+}
+
+.list-category {
+  div {
+    padding: 8px 0 8px 10px;
+  }
+
+  div a {
+    color: $default-color;
+    margin: 4px 6px;
+    white-space: nowrap;
+    font-size: 1rem;
+    display: inline-block;
+    border-bottom: 1px none #333333;
+  }
+
+  a:hover {
+    color: $body-link-color;
+    text-decoration: none;
+  }
+}

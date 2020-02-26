@@ -1,0 +1,21 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  {% include head.html %}
+
+  <body>
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
+    {% include navigation.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include script.html %}
+  </body>
+</html>

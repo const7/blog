@@ -1,0 +1,64 @@
+.catalogue {  
+  &-main {
+    border-bottom: 1px solid $grey;
+    color: $default-color;
+    display: block;
+    padding: 1.5rem 0 1.5rem 0;
+
+    &:hover .catalogue-line,
+    &:focus .catalogue-line {
+      width: 5rem;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &-time {
+    color: $default-tint;
+    font-family: $serif-primary;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    margin: 0 1rem 0 0;
+  }
+
+  &-title {
+    color: $default-shade;
+    display: block;
+    font-family: $serif-primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 .5rem 0;
+  }
+
+  &-line {
+    @include transition(all .3s ease-out);
+    border-top: .2rem solid $default-shade;
+    display: block;
+    width: 2rem;
+  }
+
+  a {
+    color: $default-color;
+  }
+
+  p {
+    margin: .5rem 0 0 0;
+  }
+}
+
+.tags {
+  color: $default-tint;
+  font-family: $serif-primary;
+  font-size: .8rem;
+  letter-spacing: .5px;
+  margin: 0 .3rem 0 0;
+  a {
+    color: $default-tint;
+  }
+  a:hover {
+    color: $body-link-color;
+    text-decoration: none;
+  }
+}
