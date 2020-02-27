@@ -32,10 +32,6 @@
     text-align: justify;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
   img {
     margin: 0 auto 0.5rem;
   }
@@ -110,6 +106,11 @@
     }
   }
 
+  // markdown list
+  li {
+    margin: 0.5rem 0;
+  }
+
   hr {
     height: 2px;
     padding: 0;
@@ -142,15 +143,4 @@
     font-size: 0.76em;
   }
   
-}
-
-.wiki-item {
-  a {
-    color: $default-color;
-  }
-  
-  a:hover {
-    color: $body-link-color;
-    text-decoration: none;
-  }
 }

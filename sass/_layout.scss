@@ -6,7 +6,6 @@
 }
 
 main,
-footer,
 .nav-container {
   display: block;
   margin: 0 auto;
@@ -78,16 +77,5 @@ footer,
       position: absolute;
       right: 0;
     }
-  }
-}
-
-footer {
-  font-family: $serif-secondary;
-  padding: 2rem 0;
-  text-align: center;
-
-  span {
-    color: $default-color;
-    font-size: .8rem;
   }
 }

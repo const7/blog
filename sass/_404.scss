@@ -1,0 +1,27 @@
+.terminal {
+  box-sizing: border-box;
+  font-family: $code-font;
+  font-size: 1.3rem;
+  color:$default-color;
+
+  .output::before {
+    content: "> ";
+  }
+
+  a::hover {
+    text-decoration: none;
+  }
+  
+  a::before {
+    content: "[";
+  }
+  
+  a::after {
+    content: "]";
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+}
