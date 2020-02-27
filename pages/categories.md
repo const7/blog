@@ -10,7 +10,6 @@ permalink: /categories
       {% assign sorted_categories = site.categories | sort %}
       {% for category in sorted_categories %}
         <a href="#{{ category[0] }}">{{ category | first }}<sup>{{ category[1].size }}</sup></a>
-        <!-- <span>{{ category[1].size }}</span> -->
       {% endfor %}
     </div>
   </div>
