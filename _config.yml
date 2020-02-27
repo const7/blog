@@ -27,7 +27,7 @@ plugins:
   # - jemoji
 
 # Permalinks
-permalink:      /posts/:year/:month/:day/:title.html
+# permalink:      /posts/:year/:month/:day/:title.html
 
 # 10 posts per page
 paginate:       10
