@@ -1,43 +1,19 @@
-<!-- MathJax数学公式支持 -->
-<style>
-  .has-jax {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent !important;
-    line-height: normal !important;
-    word-break: normal !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .has-jax * {
-    outline: 0;
-  }
-</style>
+<!-- MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: "none",
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
     tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'a']
+      <!-- inlineMath: [ ['$','$'], ["\\(","\\)"] ], 行内公式选择符 -->
+      inlineMath:  [ ["$", "$"] ],
+      <!-- displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 段内公式选择符 -->
+      displayMath: [ ["$$","$$"] ],
+      processEscapes: true
     },
-    "HTML-CSS": {
-      showMathMenu: false
-    }
-  });
-  // 父级元素添加类名，便于css控制
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax();
-    var i = 0;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
+    "HTML-CSS": { availableFonts: ["TeX"] },
+    <!-- displayAlign: "left" -->
   });
 </script>
-<script
-  type="text/javascript"
-  src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>

@@ -120,27 +120,39 @@
   }
 
   h1 {
+    font-size: 2em;
+  }
+
+  h2 {
     font-size: 1.5em;
   }
   
-  h2 {
+  h3 {
     font-size: 1.25em;
   }
   
-  h3 {
+  h4 {
     font-size: 1em;
   }
   
-  h4 {
+  h5 {
     font-size: 0.875em;
   }
   
-  h5 {
+  h6 {
     font-size: 0.85em;
   }
-
-  h6 {
-    font-size: 0.76em;
-  }
-  
 }
+
+// Adding '目录' headline to the TOC
+// #markdown-toc::before {
+//   content: "目录";
+//   font-weight: bold;
+// }
+
+// #markdown-toc {
+//   border: 2px solid #aaa;
+//   padding: 0 2em;
+//   list-style: decimal;
+//   display: inline-block;
+// }

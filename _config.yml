@@ -27,10 +27,15 @@ plugins:
   # - jemoji
 
 # Permalinks
-# permalink:      /posts/:year/:month/:day/:title.html
+permalink: /blog/:year/:month/:day/:title
+
+# kramdown
+kramdown:
+  toc_levels: 1..3
 
 # 10 posts per page
 paginate:       10
+paginate_path:  "p-:num"
 
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock']
 

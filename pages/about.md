@@ -7,7 +7,7 @@ permalink: /about
 
 > Personal blog about study and live.
 
-# Interest
+## Interest
 
 - C/C++ && Python
 - Alogrithm
@@ -16,11 +16,11 @@ permalink: /about
 - Operating System
 - Psychology
 
-# Email
+## Email
 
 const@chenkun.pro
 
-# Theme
+## Theme
 
 Made with [Jekyll](https://jekyllrb.com).
 
