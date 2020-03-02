@@ -45,7 +45,7 @@ QANet 模型原始论文的翻译兼笔记。
 
 　　word embedding + character embedding，word embedding 从预先训练好的词向量中读取，每个词向量维度为 $p_1$ ，假设词 $w$ 对应的词向量为 $x_w$；
 
-　　character embedding 随机初始化，维度为 $p_2$，将每个词的长度 padding or truncating 到 $k$，则词 $w$ 也可以表示成一个 $p_2*k$ 的矩阵，经过卷积和 max-pooling 后得到一个 $p_2$ 维的 character-level 的词向量，记为 $x_c$。
+　　character embedding 随机初始化，维度为 $p_2$，将每个词的长度 padding or truncating 到 $k$，则词 $w$ 也可以表示成一个 $p_2 * k$ 的矩阵，经过卷积和 max-pooling 后得到一个 $p_2$ 维的 character-level 的词向量，记为 $x_c$。
 
 　　将 $x_w$ 和 $x_c$ 拼接，得到词 $w$ 对应词向量 $[x_w;x_c]\in{R^{p_1+p_2}}$，最后将拼接的词向量通过一个两层的 highway network，其输出即为 embedding 层的输出。训练过程中，word embedding 固定，character embedding 随模型一起训练。
 
@@ -62,13 +62,13 @@ $$
 　　而 highway network 定义如下：
 
 $$
-y=H(x, W_H)*T(x, W_T)+x*C(x, W_C)
+y=H(x, W_H) * T(x, W_T) + x * C(x, W_C)
 $$
 
 　　其中 $T$ 称为 *transform gate*，$C$ 称为 *carry gate*。直观上来看就是网络层输出一部分来源于非线性变换 $H$ 的输出，另一部分则直接来源于网络层输入 $x$。一般情况下直接令 $C=1-T$，即：
 
 $$
-y=H(x, W_H)*T(x, W_T)+x*(1-T(x, W_T))
+y=H(x, W_H) * T(x, W_T) + x * (1-T(x, W_T))
 $$
 
 　　此时显然有：
@@ -109,7 +109,7 @@ $$
 　　先简单介绍下 Attention 机制。Attention 机制的基本原理如图 4 所示，对于给定的 Query，计算 Query 和各个 Key 之间的相似度（常用的相似度函数有点积，拼接，感知机等），得到每个 Key 对应的 Value 的权重，用 softmax 函数对权重进行归一化，最后将权重和对应的 Value 进行加权求和得到 Attention 数值。用公式表示就是：
 
 $$
-Attention(Q, K, V)=softmax(Similarity(Q, K))*V
+Attention(Q, K, V)=softmax(Similarity(Q, K)) * V
 $$
 
 　　对应到 NLP 任务里，可以将句子中的每一个单词看作一个 (Key, Value) 对，则原句子可表示为一系列 (Key,Value) 对。分别计算 Query 和每一个 Key 的相似性，得到每个 Key 对应的 Value 的权重，再对 Value 进行加权求和，得到 Attention 值。
@@ -129,7 +129,7 @@ head_i=Attention(Q{W_i}^Q, K{W_i}^K, V{W_i}^V)\\
 MultiHead(Q, K, V)=Concat(head_1, ..., head_h)
 $$
 
-
+　　其中 ${W_i}^Q\in R^{d_{model} * d_k}$，${W_i}^K\in R^{d_{model} * d_k}$，${W_i}^V \in R^{d_{model} * d_v}$，表示将 $d_{model}$ 维的 Q、K、V 分别映射到 $d_k$、$d_k$、$d_v$ 维。
 
 　　通过降维可以使 h 个 Attention 的计算量总和与原来 1 个 Attenion 计算量相当，但 h 个 Attention 可以并行，因此大大加快了计算速度。至于 mutil-head attention 的作用，论文原话是
 
@@ -151,9 +151,9 @@ $$
 
 ### Context-Query Attention Layer
 
-　　根据上一层得到的 context 和 query 的 encoder 表示来计算 context-to-query attention 和 query-to-context attention 矩阵。分别用 $C$ 和 $Q$ 来表示编码后的 context 和 query，$C\in{R^{d*n}}$、$Q\in{R^{d*m}}$。
+　　根据上一层得到的 context 和 query 的 encoder 表示来计算 context-to-query attention 和 query-to-context attention 矩阵。分别用 $C$ 和 $Q$ 来表示编码后的 context 和 query，$C\in{R^{d * n}}$、$Q\in{R^{d * m}}$。
 
-1. 首先计算 context 和 query 单词之间的相似度，结果矩阵记为 $S$，$S\in{R^{n*m}}$。其中相似度计算公式为：
+1. 首先计算 context 和 query 单词之间的相似度，结果矩阵记为 $S$，$S\in{R^{n * m}}$。其中相似度计算公式为：
 
 $$
 f(q,c)=W_0[q,c,q⊙c]
@@ -161,7 +161,7 @@ $$
 
 　　$q$、$c$ 分别为单个单词的中间表示，$W_0$ 是一个可训练的参数。
 
-2. 用 softmax 对 $S$ 的行、列分别做归一化得到 $\bar{S}$、$\bar{\bar{S}}$，则 context-to-query attention 矩阵 $A=\bar{S}·Q^T \in {R^{n*d}}$，query-to-context attention 矩阵 $B=\bar{S}·\bar{\bar{S}}^T·C^T \in {R^{n*d}}$（参考 [DCN 模型](https://arxiv.org/abs/1611.01604)）。
+2. 用 softmax 对 $S$ 的行、列分别做归一化得到 $\bar{S}$、$\bar{\bar{S}}$，则 context-to-query attention 矩阵 $A=\bar{S}·Q^T \in {R^{n * d}}$，query-to-context attention 矩阵 $B=\bar{S}·\bar{\bar{S}}^T·C^T \in {R^{n * d}}$（参考 [DCN 模型](https://arxiv.org/abs/1611.01604)）。
 
 ### Model Encoder Layer
 
