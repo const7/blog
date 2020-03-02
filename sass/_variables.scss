@@ -25,9 +25,6 @@ $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 /////////////////////////////////////////////////////////// from cayman theme ///////////////////////////////
-$large-breakpoint: 64em !default;
-$medium-breakpoint: 42em !default;
-
 // Headers
 $header-heading-color: #fff !default;
 $header-bg-color: #159957 !default;
@@ -37,7 +34,8 @@ $header-bg-color-secondary: #155799 !default;
 $section-headings-color: #159957 !default;
 $body-text-color: #333 !default;
 $body-link-color: #1e6bb8 !default;
-$body-background-color: #f0f0f0 !default;
+// $body-background-color: #f0f0f0 !default;
+$body-background-color: #ffffff !default;
 $blockquote-text-color: #819198 !default;
 
 // Code

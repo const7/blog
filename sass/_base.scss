@@ -1,10 +1,11 @@
 * {
   @include box-sizing;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 html {
   height: 100%;
+  text-rendering: optimizeLegibility;
   font-family: $serif-primary; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -15,7 +16,7 @@ body {
   margin: 0;
   font-family: $serif-primary;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: $body-text-color;
   background-color:$body-background-color;
   -webkit-text-size-adjust: 100%;
@@ -134,7 +135,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 
- a {
+a {
   color: $body-link-color;
   text-decoration: none;
 

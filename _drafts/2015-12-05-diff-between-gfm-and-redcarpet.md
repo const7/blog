@@ -29,7 +29,7 @@ redcarpet:
 * TOC
 {:toc}
 
-### 换行
+## 换行
 
 ```
 第一行（后面没有空格）
@@ -46,7 +46,7 @@ redcarpet:
 
 在 Redcarpet 里如果需要换行，要么在行尾加两个空格，要么在下面空一行新开一个段落。
 
-### 锚点链接
+## 锚点链接
 
 GFM 与 Redcarpet 支持对 `#`、`##` 和 `###` 这样的标题自动生成锚点链接，只不过在生成的链接 url 上会有少许差异。
 
@@ -127,7 +127,7 @@ GFM 与 Redcarpet 支持对 `#`、`##` 和 `###` 这样的标题自动生成锚�
 2. 进行 HTML Encode，即将 `&`、`"` 和 `'` 等转换为相应 HTML 实体。
 3. 将字符 `` -&+$,/:;=?@"#{}|^~[]`\*()%.!`` 和空格替换为 `-`，有两个及以上 `-` 的地方修复成一个，将链接串首尾的 `-_` 删除。
 
-### 列表下嵌套内容
+## 列表下嵌套内容
 
 在 Redcarpet 中有如下规则：
 
@@ -136,7 +136,7 @@ GFM 与 Redcarpet 支持对 `#`、`##` 和 `###` 这样的标题自动生成锚�
 
 而 GFM 则没有。
 
-### YML 解析
+## YML 解析
 
 在 Redcarpet 中，解析头部 YML 里的内容有些需要转义：
 
@@ -148,11 +148,11 @@ keywords: C\+\+
 
 而 GFM 则不需要。
 
-### GFM 独有特性
+## GFM 独有特性
 
 GFM 自己添加的一些特性我甚是喜欢，可惜在 GitHub Pages 里使用 Redcarpet 享受不到了。
 
-#### Task Lists
+### Task Lists
 
 这货真是个好东西，用 `- [  ]` 和 `- [ x ]` 就能做出清单列表项的显示效果来，而且如果你有编辑权限的话点选后文本能自动更新。
 
@@ -160,7 +160,7 @@ GFM 自己添加的一些特性我甚是喜欢，可惜在 GitHub Pages 里使�
 
 用法参见 [Task Lists in GFM: Issues/Pulls, Comments][5]
 
-#### 自动生成引用链接
+### 自动生成引用链接
 
 *Update 2015-12-06 参见 [@Mentions on GitHub Pages][7]，GitHub Pages 现在也支持使用 `@username` 来 at 一个 GitHub 用户了，只是用户不会收到通知。我对此功能并无需求，而且貌似会对其它使用 `@` 号的地方产生非预期的解析，所以本博客当前并未启用。*
 
@@ -176,13 +176,13 @@ GFM 自己添加的一些特性我甚是喜欢，可惜在 GitHub Pages 里使�
 * User/Repository#Num: jlord/sheetsee.js#26
 ```
 
-#### Emoji
+### Emoji
 
 *Update 2015-12-06 参见 [Emoji on GitHub Pages][8], GitHub Pages 现在也支持使用 Emoji 表情啦！:+1::+1::+1:*
 
 GitHub Pages 如果能使用这个，文章一定生动不少。
 
-### 参考链接
+## 参考链接
 
 * [GitHub Flavored Markdown][1]
 * [Writing on GitHub][6]
