@@ -43,3 +43,7 @@ exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.
 sass:
   sass_dir:     /sass
   style:        compressed
+
+  # compress html code
+compress_html:
+  blanklines:       true

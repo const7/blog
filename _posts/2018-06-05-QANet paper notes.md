@@ -94,11 +94,11 @@ $$
 
 　　相比普通卷积它所需的参数更少，泛化能力更强。它的核心思想是将一个完整的卷积运算分解为 depthwise convolution 和 pointwise convolution 两个步骤。
 
-　　首先是 depthwise convolution，以图 2 为例，假设输入是 64*64 的 3 通道图片，使用 3*3*1 大小的卷积核，filter 数量等于上一层的 depth，对输入的每个 channel 独立进行卷积运算，得到与上层 depth 相同个数的 feature map。对应到图里即 3 个 filter 分别对 3 个 channel 进行卷积，得到 3 个 feature map。
+　　首先是 depthwise convolution，以图 2 为例，假设输入是 64 * 64 的 3 通道图片，使用 3 * 3 * 1 大小的卷积核，filter 数量等于上一层的 depth，对输入的每个 channel 独立进行卷积运算，得到与上层 depth 相同个数的 feature map。对应到图里即 3 个 filter 分别对 3 个 channel 进行卷积，得到 3 个 feature map。
 
 ![depthwise convolution](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-02.jpg)_图 2 depthwise convolution_
 
-　　然后是 pointwise convolution，和常规卷积运算类似，卷积核的尺寸为 1*1*M，M 等于上一层的 depth。它会将上一步的 feature map 在深度方向上进行加权组合，生成新的 feature map，有几个 filter 就有几个 feature map。如图 3 所示，输入 depth 为 3，卷积核大小为 1*1*3，使用 4 个 filter，最终生成 4 个 feature map。
+　　然后是 pointwise convolution，和常规卷积运算类似，卷积核的尺寸为 1 * 1 * M，M 等于上一层的 depth。它会将上一步的 feature map 在深度方向上进行加权组合，生成新的 feature map，有几个 filter 就有几个 feature map。如图 3 所示，输入 depth 为 3，卷积核大小为 1 * 1 * 3，使用 4 个 filter，最终生成 4 个 feature map。
 
 ![pointwise convolution](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-03.jpg)_图 3 pointwise convolution_
 
@@ -129,7 +129,7 @@ head_i=Attention(Q{W_i}^Q, K{W_i}^K, V{W_i}^V)\\
 MultiHead(Q, K, V)=Concat(head_1, ..., head_h)
 $$
 
-　　其中 ${W_i}^Q \in R^{d_{model}*d_k}$，${W_i}^K \in R^{d_{model}*d_k}$，${W_i}^V \in R^{d_{model}*d_v}$，表示将 $d_{model}$ 维的 Q、K、V 分别映射到 $d_k$、$d_k$、$d_v$ 维。
+
 
 　　通过降维可以使 h 个 Attention 的计算量总和与原来 1 个 Attenion 计算量相当，但 h 个 Attention 可以并行，因此大大加快了计算速度。至于 mutil-head attention 的作用，论文原话是
 
@@ -154,6 +154,7 @@ $$
 　　根据上一层得到的 context 和 query 的 encoder 表示来计算 context-to-query attention 和 query-to-context attention 矩阵。分别用 $C$ 和 $Q$ 来表示编码后的 context 和 query，$C\in{R^{d*n}}$、$Q\in{R^{d*m}}$。
 
 1. 首先计算 context 和 query 单词之间的相似度，结果矩阵记为 $S$，$S\in{R^{n*m}}$。其中相似度计算公式为：
+
 $$
 f(q,c)=W_0[q,c,q⊙c]
 $$
