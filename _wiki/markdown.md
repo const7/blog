@@ -127,10 +127,13 @@ print 'Hello, World!'
 ### 图片
 
 ```
-![本站favicon](/favicon.ico)
+![QANet 模型结构](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-01.jpg){:height="50%" width="50%"}_图 1 QANet 模型结构_
+
+// {:height="50%" width="50%"}可用于图片放缩（kramdown自带）
+// 阿里云oss自带放缩会同时压缩画质
 ```
 
-![本站favicon](/favicon.ico)
+![QANet 模型结构](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-01.jpg){:height="50%" width="50%"}_图 1 QANet 模型结构_
 
 ### 锚点
 
