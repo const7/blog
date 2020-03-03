@@ -5,6 +5,7 @@ categories: [Algorithm]
 description: 青蛙跳台阶变种问题
 keywords: 算法, 青蛙, 台阶
 mathjax: true
+comment: true
 ---
 
 完美世界算法岗笔试题。

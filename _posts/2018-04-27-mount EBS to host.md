@@ -5,6 +5,7 @@ categories: [Linux, 杂项]
 description: 云主机挂载云硬盘
 keywords: Linux, VPS, 云主机, 云硬盘
 mathjax: false
+comment: true
 ---
 
 记载如何将云硬盘挂载到实验室主机，这样就不用每次都去搜教程了。
