@@ -1,6 +1,8 @@
 .post {
   padding: 1.5rem 0 3rem 0;
   word-wrap: break-word;
+  border-bottom: thick double $grey;
+  margin: 0 auto 3rem;
 
   :first-child {
     margin-top: 0;
@@ -201,3 +203,10 @@
 //   list-style: decimal;
 //   display: inline-block;
 // }
+
+// valine comment title
+#vcomment::before {
+  content: "Comments";
+  font-size: 2rem;
+  margin: 0 auto .5rem;
+}

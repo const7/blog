@@ -1,0 +1,16 @@
+<!-- valine comment -->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: "#vcomment",
+        app_id: "{{ site.valine.appid }}",
+        app_key: "{{ site.valine.appkey }}",
+        placeholder:"{{ site.valine.placeholder }}",
+        notify: "{{ site.valine.notify }}",
+        verify: "{{ site.valine.verify }}",
+        avatar: "{{ site.valine.avatar }}",
+        meta: ["nick", "mail"],
+        // meta: "{{ site.valine.meta }}",
+        // pageSize: "{{ site.valine.pageSize }}"
+    });
+</script>

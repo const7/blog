@@ -7,12 +7,17 @@ layout: default
   <div class="post-info">
     <time datetime="{{ page.date }}" class="post-info-time">{{ page.date | date: "%Y/%m/%d" }}</time>
     {% for cat in page.categories %}
-      <span class="tags">
-        <a href="{{ site.url }}/categories#{{ cat }}" title="{{ cat }}">#{{ cat }}</a>
-      </span>
+    <span class="tags">
+      <a href="{{ site.url }}/categories#{{ cat }}" title="{{ cat }}">#{{ cat }}</a>
+    </span>
     {% endfor %}
   </div>
 
   {{ content }}
 
 </div>
+
+<!-- valine comment -->
+{%- if page.comment==true -%}
+<div id="vcomment"></div>
+{% endif %}

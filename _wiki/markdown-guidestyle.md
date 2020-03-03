@@ -10,11 +10,6 @@ flow: true
 mathjax: true
 ---
 
-Markdown 编写规范
-=======================
-
-此为前端开发团队遵循和约定的 **Markdown 编写规范**，意在提高文档的可读性。
-
 ## 说明
 
 文档中使用的关键字「MUST」,「MUST NOT」,「REQUIRED」,「SHALL」,「SHALL

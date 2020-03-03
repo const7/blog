@@ -2,3 +2,8 @@
 {%- if page.mathjax==true -%}
 {% include ext-mathjax.html %}
 {% endif %}
+
+<!-- enable comment -->
+{%- if page.comment==true -%}
+{% include ext-comment.html %}
+{% endif %}

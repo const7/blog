@@ -47,3 +47,17 @@ sass:
   # compress html code
 compress_html:
   blanklines:       true
+
+# Valine comment system
+valine:
+  appid:  lEIv1VK2U7GjS8qxH71A5nkS-MdYXbMMI # your leancloud app id
+  appkey: 2G2miTD0y1N95pWubaI1UgqG # your leancloud app key
+  placeholder: 留下邮箱可收到邮件回复 # comment box placeholder
+  notify: false # mail notifier
+  verify: false # Verification code
+  avatar: monsterid  # gravatar style
+  # pageSize: 10 # pagination size
+
+  ## not sure how to set in _config.yml
+  # meta is set in _include/ext-comment.html
+  # meta: ["nick", "mail"]      # custom comment header
