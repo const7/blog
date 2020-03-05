@@ -53,7 +53,7 @@ keywords: Git, 版本控制
 
 ### 如何处理本地有更改需要从服务器合入新代码的情况？
 
-```
+```sh
 git stash
 git pull
 git stash pop
@@ -63,25 +63,25 @@ git stash pop
 
 查看 stash 列表：
 
-```
+```sh
 git stash list
 ```
 
 查看某一次 stash 的改动文件列表（不传最后一个参数默认显示最近一次）：
 
-```
+```sh
 git stash show stash@{0}
 ```
 
 以 patch 方式显示改动内容
 
-```
+```sh
 git stash show -p stash@{0}
 ```
 
 ### 如何合并 fork 的仓库的上游更新？
 
-```
+```sh
 git remote add upstream https://upstream-repo-url
 git fetch upstream
 git merge upstream/master
@@ -100,13 +100,13 @@ git merge upstream/master
 
 ### 如何不建立一个没有 parent 的 branch？
 
-```
+```sh
 git checkout --orphan newbranch
 ```
 
 此时 `git branch` 是不会显示该 branch 的，直到你做完更改首次 commit。比如你可能会想建立一个空的 gh-pages branch，那么：
 
-```
+```sh
 git checkout --orphan gh-pages
 git rm -rf .
 // add your gh-pages branch files
@@ -118,13 +118,13 @@ git commit -m "init commit"
 
 **添加 submodule**
 
-```
+```sh
 git submodule add git@github.com:philsquared/Catch.git Catch
 ```
 
 这会在仓库根目录下生成如下 .gitmodules 文件并 clone 该 submodule 到本地。
 
-```
+```sh
 [submodule "Catch"]
 path = Catch
 url = git@github.com:philsquared/Catch.git
@@ -132,19 +132,19 @@ url = git@github.com:philsquared/Catch.git
 
 **更新 submodule**
 
-```
+```sh
 git submodule update
 ```
 
 当 submodule 的 remote 有更新的时候，需要
 
-```
+```sh
 git submodule update --remote
 ```
 
 当在本地拉取了 submodule 的远程更新，但是想反悔时：
 
-```
+```sh
 git submodule update --init
 ```
 
@@ -152,42 +152,42 @@ git submodule update --init
 
 在 .gitmodules 中删除对应 submodule 的信息，然后使用如下命令删除子模块所有文件：
 
-```
+```sh
 git rm --cached Catch
 ```
 
 **clone 仓库时拉取 submodule**
 
-```
+```sh
 git submodule update --init --recursive
 ```
 
 ### 删除远程 tag
 
-```
+```sh
 git tag -d v0.0.9
 git push origin :refs/tags/v0.0.9
 ```
 
 或
 
-```
+```sh
 git push origin --delete tag [tagname]
 ```
 
 ### 基于某次 commit 创建 tag
 
-```
+```sh
 git tag <tag name> <commit id>
 ```
 
-```
+```sh
 git tag v1.0.0 ef0120
 ```
 
 ### 清除未跟踪文件
 
-```
+```sh
 git clean
 ```
 
@@ -208,7 +208,7 @@ git clean
 
 因为临时需求对某个文件 chmod 了一下，结果这个就被记为了更改，有时候这是想要的，有时候这会造成困扰。
 
-```
+```sh
 git config --global core.filemode false
 ```
 
@@ -230,19 +230,19 @@ gitignore 里，*、?、[] 可用作通配符。
 
 将未添加到暂存区的更改生成 patch 文件：
 
-```
+```sh
 git diff > demo.patch
 ```
 
 将已添加到暂存区的更改生成 patch 文件：
 
-```
+```sh
 git diff --cached > demo.patch
 ```
 
 合并上面两条命令生成的 patch 文件包含的更改：
 
-```
+```sh
 git apply demo.patch
 ```
 
@@ -250,7 +250,7 @@ git apply demo.patch
 
 （HEAD 可以换成 sha1 码）
 
-```
+```sh
 git format-patch -3 HEAD
 ```
 
@@ -258,13 +258,13 @@ git format-patch -3 HEAD
 
 （注意 af8e2 比 eaf8e 早）
 
-```
+```sh
 git format-patch af8e2..eaf8e
 ```
 
 合并 format-patch 命令生成的 patch 文件：
 
-```
+```sh
 git am 0001-Update.patch
 ```
 
@@ -272,19 +272,19 @@ git am 0001-Update.patch
 
 ### 只下载最新代码
 
-```
+```sh
 git clone --depth 1 git://xxxxxx
 ```
 
 这样 clone 出来的仓库会是一个 shallow 的状态，要让它变成一个完整的版本：
 
-```
+```sh
 git fetch --unshallow
 ```
 
 或
 
-```
+```sh
 git pull --unshallow
 ```
 
@@ -587,6 +587,6 @@ fatal: no man viewer handled the request
 
 可以修改 git 配置让命令的帮助文档通过浏览器打开。
 
-```
+```sh
 git config --global help.format web
 ```
