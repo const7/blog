@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 云主机挂载云硬盘
-categories: [Linux, 杂项]
+categories: [Linux, Others]
 description: 云主机挂载云硬盘
 keywords: Linux, VPS, 云主机, 云硬盘
 mathjax: false

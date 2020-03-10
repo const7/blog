@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Markdown
-categories: Markdown
+title: Markdown 常见用法
+categories: [Markdown]
 description: Markdown 常用语法示例。
 keywords: Markdown
 mermaid: true
@@ -10,38 +10,87 @@ flow: true
 mathjax: true
 ---
 
-**目录**
+### Jekyll目录
 
 * TOC
 {:toc}
 
+```
+* TOC
+{:toc}
+```
+
+## 这里是 h2
+
+### 这里是 h3
+
+#### 这里是 h4
+
+##### 这里是 h5
+
+###### 这里是 h6
+
+```
+## 这里是 h2
+### 这里是 h3
+#### 这里是 h4
+##### 这里是 h5
+###### 这里是 h6
+```
+
+### 段落
+
+段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落
+
+段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落
+
 ### 超链接
 
+[TMaize Blog](http://blog.tmaize.net)
+
 ```
-[靠谱-ing](https://mazhuang.org)
-
-<https://mazhuang.org>
+[TMaize Blog](http://blog.tmaize.net)
 ```
 
-[靠谱-ing](https://mazhuang.org)  
+### 引用
 
-<https://mazhuang.org>
+> 这里是引用
+
+```
+> 这里是引用
+```
+
+### 常见字体样式
+
+_斜体_
+
+**粗体**
+
+~~删除线~~
+
+```
+_斜体_
+**粗体**
+~~删除线~~
+```
 
 ### 列表
 
-```
-1. 有序列表项 1
+- 无序列表 1-1
 
-2. 有序列表项 2
+  缩进 2 空格
 
-3. 有序列表项 3
-```
+  - 缩进 2 空格
+  - 缩进 2 空格
 
-1. 有序列表项 1
+- 无序列表 1-2
+- 无序列表 1-3
 
-2. 有序列表项 2
+* 无序列表项 1
 
-3. 有序列表项 3
+* 无序列表项 2
+
+* 无序列表项 3
 
 ```
 * 无序列表项 1
@@ -51,80 +100,57 @@ mathjax: true
 * 无序列表项 3
 ```
 
-* 无序列表项 1
+1. 有序列表 1-1
 
-* 无序列表项 2
+   缩进 3 空格
 
-* 无序列表项 3
+   1. 缩进 3 空格
+   2. 缩进 3 空格
+
+2. 有序列表 1-2
+3. 有序列表 1-3
+
+```
+- 无序列表 1-1
+
+  缩进 2 空格
+
+  - 缩进 2 空格
+  - 缩进 2 空格
+
+- 无序列表 1-2
+- 无序列表 1-3
+
+1. 有序列表 1-1
+
+   缩进 3 空格
+
+   1. 缩进 3 空格
+   2. 缩进 3 空格
+
+2. 有序列表 1-2
+3. 有序列表 1-3
+```
+
+- [x] 任务列表 1
+- [ ] 任务列表 2
 
 ```
 - [x] 任务列表 1
 - [ ] 任务列表 2
 ```
 
-- [x] 任务列表 1
-- [ ] 任务列表 2
+### 分割线
 
-### 强调
-
-```
-~~删除线~~
-
-**加黑**
-
-*斜体*
-```
-
-~~删除线~~
-
-**加黑**
-
-*斜体*
-
-### 标题
+---
 
 ```
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+---
 ```
-
-Tips: `#` 与标题中间要加空格。
-
-### 表格
-
-```
-| HEADER1 | HEADER2 | HEADER3 | HEADER4 |
-| ------- | :------ | :-----: | ------: |
-| content | content | content | content |
-```
-
-| HEADER1 | HEADER2 | HEADER3 | HEADER4 |
-| ------- | :------ | :-----: | ------: |
-| content | content | content | content |
-
-1. :----- 表示左对齐
-2. :----: 表示中对齐
-3. -----: 表示右对齐
-
-### 代码块
-
-```python
-print 'Hello, World!'
-```
-
-1. list item1
-
-2. list item2
-
-   ```python
-   print 'hello'
-   ```
 
 ### 图片
+
+![QANet 模型结构](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-01.jpg){:height="50%" width="50%"}_图 1 QANet 模型结构_
 
 ```
 ![QANet 模型结构](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-01.jpg){:height="50%" width="50%"}_图 1 QANet 模型结构_
@@ -133,7 +159,66 @@ print 'Hello, World!'
 // 阿里云oss自带放缩会同时压缩画质
 ```
 
-![QANet 模型结构](https://const-blog.oss-cn-beijing.aliyuncs.com/img/2018-06-05-01.jpg){:height="50%" width="50%"}_图 1 QANet 模型结构_
+### 代码行
+
+这是一段文字 `rm -rf /*` 这是一段文字
+
+```
+这是一段文字`rm -rf /*`这是一段文字
+```
+
+### 代码块
+
+```javascript
+blog.encodeHtml = function(html) {
+  var o = document.createElement('div')
+  o.innerText = html
+  var temp = o.innerHTML
+  o = null
+  return temp
+}
+```
+
+````
+```javascript
+blog.encodeHtml = function(html) {
+var o = document.createElement('div')
+o.innerText = html
+var temp = o.innerHTML
+o = null
+return temp
+}
+```
+````
+
+### 表格
+
+| HEADER1 | HEADER2 | HEADER3 | HEADER4 |
+| ------- | :------ | :-----: | ------: |
+| content | content | content | content |
+
+```md
+| HEADER1 | HEADER2 | HEADER3 | HEADER4 |
+| ------- | :------ | :-----: | ------: |
+| content | content | content | content |
+```
+
+1. :----- 表示左对齐
+2. :----: 表示中对齐
+3. -----: 表示右对齐
+
+### 数学公式
+
+这是一行话 $\( \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \)$ 这是一行话
+
+$$\text{If } A_1, A_2, \ldots \in \mathcal R \Rightarrow \bigcup_{n=1}^\infty A_n \in \mathcal R$$
+
+$$
+R_{\mu \nu} - {1 \over 2}g_{\mu \nu}\,R + g_{\mu \nu} \Lambda
+= {8 \pi G \over c^4} T_{\mu \nu}
+$$
+
+
 
 ### 锚点
 
@@ -186,10 +271,74 @@ cond(yes)->io->e
 cond(no)->sub1(right)->op1
 ```
 
-### mathjax
+### 插入 html
 
-When $$(a \ne 0)$$, there are two solutions to $$(ax^2 + bx + c = 0)$$ and they are
+<div id="htmldemo"></div>
+<style>
+#htmldemo{
+    height: 30px;
+    width: 30px;
+    background-color: #00aa9a;
+    animation-name: moveX;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode : both;
+}
+@keyframes moveX {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+</style>
 
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+```html
+<div id="htmldemo"></div>
+<style>
+  #htmldemo {
+    height: 30px;
+    width: 30px;
+    background-color: #00aa9a;
+    animation-name: moveX;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  }
+  @keyframes moveX {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(100px);
+    }
+  }
+</style>
+```
+
+### 插入 iframe
+
+<iframe
+  src="//music.163.com/outchain/player?type=2&id=28445796&auto=0&height=66"
+  frameborder="0"
+  width="100%"
+  height="86px"
+></iframe>
+
+```html
+<!-- 属性什么的不要错了，最好用双引号括住 -->
+<!-- 网易云的iframe需要做些调整，调整如下 -->
+<iframe
+  src="//music.163.com/outchain/player?type=2&id=28445796&auto=0&height=66"
+  frameborder="0"
+  width="100%"
+  height="86px"
+></iframe>
+```
 
 [^1]: Here is the footnote 1 definition.

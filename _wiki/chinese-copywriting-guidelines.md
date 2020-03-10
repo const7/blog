@@ -1,12 +1,12 @@
 ---
 layout: wiki
 title: 中文文案排版指北（简体中文版）
-categories: Copywriting
+categories: [Markdown]
 description: 中文文案排版指北（简体中文版）。
 keywords: 中文文案排版指北
 ---
 
-GitHub repository: [mzlogin/chinese-copywriting-guidelines](https://github.com/mzlogin/chinese-copywriting-guidelines)
+来源: [mzlogin/chinese-copywriting-guidelines](https://github.com/mzlogin/chinese-copywriting-guidelines)
 
 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
 

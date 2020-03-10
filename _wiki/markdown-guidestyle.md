@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Markdown 编写规范
-categories: Markdown
+categories: [Markdown]
 description: Markdown 常用语法示例。
 keywords: Markdown
 mermaid: true
@@ -9,6 +9,8 @@ sequence: true
 flow: true
 mathjax: true
 ---
+
+来源：[fex-team/styleguide](https://github.com/fex-team/styleguide)
 
 ## 说明
 
