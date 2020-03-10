@@ -2,9 +2,9 @@
   padding: 1.5rem 0 3rem 0;
   word-wrap: break-word;
 
-  :first-child {
-    margin-top: 0;
-  }
+  // :first-child {
+  //   margin-top: 0;
+  // }
 
   &-info {
     color: $default-tint;
@@ -109,6 +109,10 @@
   }
 
   // markdown list
+  ul {
+    margin: .5rem 0 .5rem;
+  }
+  
   li {
     margin: 0.3rem 0;
   }
@@ -121,6 +125,7 @@
     border: 0;
   }
 
+  // title
   h1 {
     font-size: 2em;
   }
