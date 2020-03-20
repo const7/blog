@@ -244,6 +244,10 @@ $$
 
 This is a text with footnote[^1].
 
+```md
+This is a text with footnote[^1].
+```
+
 ### 插入 html
 
 <div id="htmldemo"></div>
@@ -313,3 +317,7 @@ This is a text with footnote[^1].
 ```
 
 [^1]: Here is the footnote 1 definition.
+
+```md
+This is a text with footnote[^1].
+```
