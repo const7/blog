@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 青蛙跳台阶变种
-categories: [Algorithm]
+tags: [Algorithm]
 description: 青蛙跳台阶变种问题
 keywords: 算法, 青蛙, 台阶
 mathjax: true

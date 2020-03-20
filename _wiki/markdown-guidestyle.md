@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Markdown 编写规范
-categories: [Markdown]
+tags: [Markdown]
 description: Markdown 常用语法示例。
 keywords: Markdown
 mermaid: true

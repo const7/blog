@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Git
-categories: [Git]
+tags: [Git]
 description: Git 常用操作记录。
 keywords: Git, 版本控制
 ---

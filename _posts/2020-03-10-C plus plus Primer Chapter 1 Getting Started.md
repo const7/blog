@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《C++ Primer》第一章：开始
-categories: [C++, Book Notes]
+tags: [C++, Book Notes]
 description: C++ Primer 第一章
 keywords: C++
 mathjax: false

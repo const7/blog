@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: 中文文案排版指北（简体中文版）
-categories: [Markdown]
+tags: [Markdown]
 description: 中文文案排版指北（简体中文版）。
 keywords: 中文文案排版指北
 ---

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Markdown 常见用法
-categories: [Markdown]
+tags: [Markdown]
 description: Markdown 常用语法示例。
 keywords: Markdown
 mermaid: true
@@ -218,8 +218,6 @@ R_{\mu \nu} - {1 \over 2}g_{\mu \nu}\,R + g_{\mu \nu} \Lambda
 = {8 \pi G \over c^4} T_{\mu \nu}
 $$
 
-
-
 ### 锚点
 
 ```
@@ -234,42 +232,17 @@ $$
 :blush:
 :smile:
 
+### inline gist
+
+由于网络原因暂时不使用
+
+```ruby
+{% gist c08ee0f2726fd0e3909d %}
+```
+
 ### Footnotes
 
 This is a text with footnote[^1].
-
-### mermaid
-
-<div class="mermaid">
-sequenceDiagram
-    Alice-->>John: Hello John, how are you?
-    John-->>Alice: Great!
-</div>
-
-### sequence
-
-```sequence
-Andrew->China: Says Hello
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
-```
-
-### flowchart
-
-```flow
-st=>start: Start
-e=>end
-op1=>operation: My Operation
-sub1=>subroutine: My Subroutine
-cond=>condition: Yes
-or No?
-io=>inputoutput: catch something...
-
-st->op1->cond
-cond(yes)->io->e
-cond(no)->sub1(right)->op1
-```
 
 ### 插入 html
 

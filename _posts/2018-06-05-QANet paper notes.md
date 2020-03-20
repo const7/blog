@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: QANet 模型
-categories: [NLP, Deep Learning, Paper Notes]
+tags: [NLP, Deep Learning, Paper Notes]
 description: QANet模型原始论文翻译兼部分解读
 keywords: NLP, QANet, 论文
 mathjax: true

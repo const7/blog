@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《C++ Primer》第二章：变量和基本类型
-categories: [C++, Book Notes]
+tags: [C++, Book Notes]
 description: C++ Primer 第二章
 keywords: C++
 mathjax: false
