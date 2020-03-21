@@ -236,10 +236,6 @@ $$
 
 由于网络原因暂时不使用
 
-```ruby
-{% gist c08ee0f2726fd0e3909d %}
-```
-
 ### Footnotes
 
 This is a text with footnote[^1].

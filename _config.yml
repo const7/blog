@@ -24,7 +24,6 @@ collections:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
-  - jemoji
 
 # Permalinks
 permalink: /blog/:year/:month/:day/:title
