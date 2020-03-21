@@ -8,7 +8,7 @@ layout: default
       <a href="{{ post.url | prepend: site.baseurl }}">
         <h1 class="catalogue-title">{{ post.title }}</h1>
         <p>
-          {{post.excerpt | strip_html | strip}}
+          {{post.excerpt | strip_html}}
         </p>
       </a>
       <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%Y/%m/%d" }}</time>
