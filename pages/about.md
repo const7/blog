@@ -16,9 +16,15 @@ permalink: /about
 - Operating System
 - Psychology
 
-## Email
+## Contact
 
-const@chenkun.pro
+- GitHub: [const7](https://github.com/const7)
+
+- Email: [const@chenkun.pro](const@chenkun.pro)
+
+<!-- ## GitHub Chart
+
+![GitHub Chart](https://ghchart.rshah.org/const7) -->
 
 ## Theme
 
