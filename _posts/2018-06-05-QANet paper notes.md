@@ -8,18 +8,12 @@ mathjax: true
 comment: true
 ---
 
-QANet 模型原始论文的翻译兼笔记。
+目前的端到端机器阅读和问答模型主要基于包含注意力的循环神经网络，在训练和推理方面效率较低。论文提出了一种名为 QANet 的问答架构，它的编码器仅由卷积和自注意力 (self-attention) 组成，其中卷积对局部交互和自注意力模型的全局交互进行建模。QAnet在 SQuAD 数据集上的模型训练速度、推理速度以及 F1 值都有明显提升。
+
+## 目录
 
 * toc
 {:toc}
-
-原始论文：[QANet: Combining Local Convolution With Global Self-Attention For Reading Comprehension](https://openreview.net/pdf?id=B14TlG-RW)[CMU & Google]
-
-// 待补充。
-
-## Abstract
-
-　　目前的端到端机器阅读和问答模型主要基于包含注意力的循环神经网络，在训练和推理方面效率较低。论文提出了一种名为 QANet 的问答架构，它的编码器仅由卷积和自注意力 (self-attention) 组成，其中卷积对局部交互和自注意力模型的全局交互进行建模。在 SQuAD 数据集中，模型的训练速度提高了 3 至 13 倍，推理速度提高了 4 至 9 倍，同时达到了与循环模型相媲美精确度。加速增益 (speed-up gain) 能够用更多的数据来训练模型。因此，论文将 QANet 模型与由神经机器翻译模型的反向翻译生成的数据结合起来。在 SQuAD 数据集上，使用增强数据训练的单一模型在测试集中 F1 值达到 84.6，显著优于过去公布的F1最佳值 81.8。 
 
 ## Introduction
 
@@ -34,11 +28,11 @@ QANet 模型原始论文的翻译兼笔记。
 ## Model
 
 模型由五层结构组成：
- - input embedding layer
- - embedding encoder layer
- - context-query attention layer
- - model encoder layer
- - output layer
+  - input embedding layer
+  - embedding encoder layer
+  - context-query attention layer
+  - model encoder layer
+  - output layer
 
 ![QANet 模型结构](https://img.chenkun.pro/img/2018-06-05-01.jpg)_图 1 QANet 模型结构_
 
@@ -188,6 +182,11 @@ $$
 　　其中 $y_i^1$、$y_i^2$ 分别为第 $i$ 个样本的 groudtruth 的起始位置和结束位置。
 
 > 对测试集进行预测时，span(s, e) 的选取规则是：$p_s^1$、$p_e^2$ 最大且 $s\leq e$。
+
+
+## 原始论文：
+
+[QANet: Combining Local Convolution With Global Self-Attention For Reading Comprehension](https://openreview.net/pdf?id=B14TlG-RW)[CMU & Google]
 
 ## 参考文献：
 

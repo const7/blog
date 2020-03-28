@@ -1,6 +1,6 @@
 # Site settings
-title:          const
-description:    "Blog about study and live."
+title:          Const's Blog
+description:    "Blog about study and life."
 baseurl:        ""
 url:            "https://blog.chenkun.pro"
 

@@ -3,7 +3,7 @@
     border-bottom: 1px solid $grey;
     color: $default-color;
     display: block;
-    padding: 1rem 0 .5rem 0;
+    padding: 1rem;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {
@@ -24,18 +24,18 @@
   }
 
   &-title {
-    color: $default-shade;
+    color: $default-color;
     display: block;
     font-family: $serif-primary;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: normal;
     margin: 0;
     line-height: 1.5em;
   }
 
   &-line {
     @include transition(all .3s ease-out);
-    border-top: .2rem solid $default-shade;
+    border-top: .2rem solid $default-color;
     display: block;
     width: 2rem;
   }
@@ -45,20 +45,24 @@
   }
 
   p {
+    color: $default-tint;
     margin: 0;
   }
 }
 
 .tags {
+  @include transition(all .2s ease-out);
   color: $default-tint;
   font-family: $serif-primary;
   font-size: .8rem;
   letter-spacing: .5px;
   margin: 0 .3rem 0 0;
+
   a {
     color: $default-tint;
   }
-  a:hover {
+  a:hover,
+  a:focus {
     color: $body-link-color;
     text-decoration: none;
   }

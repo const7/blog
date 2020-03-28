@@ -1,28 +1,28 @@
 code {
   padding: 2px 4px;
   font-family: $code-font;
-  font-size: 0.9rem;
-  color: $code-text-color;
-  background-color: $code-bg-color;
+  font-size: 1rem;
+  color: $inline-code-text-color;
+  background-color: $inline-code-bg-color;
   border-radius: 0.3rem;
 }
 
 pre {
-  padding: 0.8rem;
+  padding: .5rem .8rem;
   margin-top: 0;
   margin-bottom: 1rem;
   font: 1rem $code-font;
-  color: $code-text-color;
+  color: $block-code-text-color;
   word-wrap: normal;
-  background-color: $code-bg-color;
-  border: solid 1px $border-color;
+  background-color: $block-code-bg-color;
+  border: 1px solid;
   border-radius: 0.3rem;
 
   > code {
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
-    color: $code-text-color;
+    font-size: 1rem;
+    color: $block-code-text-color;
     word-break: normal;
     white-space: pre;
     background: transparent;
@@ -42,7 +42,7 @@ pre {
   // .lineno {
   //   color: $default-tint;
   //   display: inline-block; // Ensures the null space also isn't selectable
-  //   padding: 0 .75rem 0 .25rem;
+  //   padding: .75rem 0 .25rem;
   //   // Make sure numbers aren't selectable
   //   -webkit-user-select: none;
   //      -moz-user-select: none;
@@ -52,9 +52,9 @@ pre {
 
 .highlight pre,
 pre {
-  padding: 0.8rem;
+  padding: .5rem .8rem;
   overflow: auto;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.45;
   border-radius: 0.3rem;
   -webkit-overflow-scrolling: touch;

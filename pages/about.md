@@ -5,7 +5,7 @@ author: const
 permalink: /about
 ---
 
-> Personal blog about study and live.
+> Personal blog about study and life.
 
 ## Interest
 

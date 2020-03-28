@@ -1,14 +1,13 @@
 // Colors
-$default-color: #555;
-$default-shade: #353535;
-$default-tint: #aaa;
+$default-color: #353535;
+$default-tint: #757373;
 $grey: #e5e5e5;
 $shadow-color: rgba(0, 0, 0, .2);
 
 // Fonts
-$serif-primary: "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", sans-serif, "Merriweather", serif;
-$serif-secondary: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$sans-serif: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$serif-primary: Arial, "Microsoft YaHei Ui", simsum,Helvetica,sans-serif;
+$serif-secondary: "Microsoft YaHei", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-secondary: "Microsoft YaHei", 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 @mixin box-sizing($type: border-box) {
@@ -38,8 +37,10 @@ $body-background-color: #ffffff !default;
 $blockquote-text-color: #819198 !default;
 
 // Code
-$code-bg-color: #f3f6fa !default;
-$code-text-color: #567482 !default;
+$inline-code-bg-color: #f7f7f5 !default;
+$block-code-bg-color: #05313b !default;
+$inline-code-text-color: #c7254e !default;
+$block-code-text-color: #bebcbc;
 
 // Borders
 $border-color: #dce6f0 !default;

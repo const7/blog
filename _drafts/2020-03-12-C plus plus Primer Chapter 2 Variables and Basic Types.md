@@ -229,11 +229,11 @@ comment: true
 - 当预处理器看到 `#include` 标记时，会用指定的头文件内容代替 `#include`
 - **头文件保护符 (header guard)**：头文件保护符依赖于预处理变量（如下例中的 `SALES_DATA_H`），可以有效防止重复包含头文件
 
-```cpp
-#ifndef SALES_DATA_H
-#define SALES_DATA_H
-strct Sale_data{
-    ...
-};
-#endif
-```
+  ```cpp
+  #ifndef SALES_DATA_H
+  #define SALES_DATA_H
+  strct Sale_data{
+      ...
+  };
+  #endif
+  ```

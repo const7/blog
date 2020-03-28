@@ -8,13 +8,9 @@ mathjax: true
 comment: true
 ---
 
-完美世界算法岗笔试题。
+一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级，但年幼的青蛙不能连续跳 2 级，求年幼青蛙跳上一个 n 级的台阶总共有多少种方法？
 
-## 问题
-
-> 一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级，但年幼的青蛙不能连续跳 2 级，求年幼青蛙跳上一个 n 级的台阶总共有多少种方法？
-
-相比原问题多了一个限制条件，但整体思路类似（下面所有解法都不考虑数据溢出问题）。
+> 相比原问题多了一个限制条件，但整体思路类似（下面所有解法都不考虑数据溢出问题）。
 
 ## 解法
 
@@ -34,9 +30,9 @@ f(n-1)+f(n-2), & \text{if 上一步跳了 1 级}
 // n：剩余台阶级数
 // two：为 1 表示上一步跳了 2 级，为 0 表示上一步跳了1级
 int jump(int n, int two) {
-	if (n <= 1) return n;
-	if (n == 2) return two ? 1 : 2;
-	return two ? (jump(n - 1, 0)) : (jump(n - 1, 0) + jump(n - 2, 1));
+    if (n <= 1) return n;
+    if (n == 2) return two ? 1 : 2;
+    return two ? (jump(n - 1, 0)) : (jump(n - 1, 0) + jump(n - 2, 1));
 }
 ```
 
@@ -50,20 +46,20 @@ int jump(int n, int two) {
 
 ```cpp
 int jump(int n) {
-	vector<vector<int>> v(n + 1, vector<int>(2, 0));
-	// v[i][0]表示上一跳为 1 级时，剩余 i 级台阶有 v[i][0] 种跳法
-	// v[i][1]表示上一跳为 2 级时，剩余 i 级台阶有 v[i][1] 种跳法
-	v[1][0] = 1;
-	v[1][1] = 1;
-	if (n >= 2) {
-		v[2][0] = 2;
-		v[2][1] = 1;
-	}
-	for (int i = 3; i <= n; ++i) {
-		v[i][0] = v[i - 1][0] + v[i - 2][1];	
-		v[i][1] = v[i - 1][0];
-	}
-	return v[n][0];
+    vector<vector<int>> v(n + 1, vector<int>(2, 0));
+    // v[i][0]表示上一跳为 1 级时，剩余 i 级台阶有 v[i][0] 种跳法
+    // v[i][1]表示上一跳为 2 级时，剩余 i 级台阶有 v[i][1] 种跳法
+    v[1][0] = 1;
+    v[1][1] = 1;
+    if (n >= 2) {
+        v[2][0] = 2;
+        v[2][1] = 1;
+    }
+    for (int i = 3; i <= n; ++i) {
+        v[i][0] = v[i - 1][0] + v[i - 2][1];	
+        v[i][1] = v[i - 1][0];
+    }
+    return v[n][0];
 }
 ```
 
@@ -91,28 +87,28 @@ $$\underbrace{...\quad\underbrace{2\quad2\quad2\quad2}_{x 个 2}\quad...}_{x+1 �
 ```cpp
 // 计算 C(a, b)
 int cal_c(int a, int b) {
-	if (a == 0)
-		return 0;
-	if (b == 0) return 1;
+    if (a == 0)
+        return 0;
+    if (b == 0) return 1;
 
-	int a_fac = 1, b_fac = 1;
-	for (int i = a; i > a - b; --i)
-		a_fac *= i;
-	for (int i = 1; i <= b; ++i)
-		b_fac *= i;
-	return a_fac / b_fac;
+    int a_fac = 1, b_fac = 1;
+    for (int i = a; i > a - b; --i)
+        a_fac *= i;
+    for (int i = 1; i <= b; ++i)
+        b_fac *= i;
+    return a_fac / b_fac;
 }
 
 int jump(int n) {
-	if (n <= 2) return n;
-	int total = 0;
-	int a, b;
-	for (int x = 0; x <= (n + 1) / 3; ++x) {
-		a = n - 3 * x + 1;
-		b = x + 1;
-		total += cal_c(a + b - 1, b - 1);
-	}
-	return total;
+    if (n <= 2) return n;
+    int total = 0;
+    int a, b;
+    for (int x = 0; x <= (n + 1) / 3; ++x) {
+        a = n - 3 * x + 1;
+        b = x + 1;
+        total += cal_c(a + b - 1, b - 1);
+    }
+    return total;
 }
 ```
 
