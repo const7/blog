@@ -23,7 +23,7 @@ permalink: /tags
     {% for post in tag.last %}
     <li class="tags-list-item">
       <span class="tags-list-meta">{{ post.date | date:"%Y-%m-%d" }}</span>
-      <a class="tags-list-name" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+      <a class="tags-list-name" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ol>
