@@ -1,8 +1,8 @@
 # Site settings
 title:          const
 description:    "Blog about study and life."
-domainUrl:      "https://blog.chenkun.pro"
 baseurl:        ""
+url:            "https://blog.chenkun.pro"
 
 # 菜单
 menu:
