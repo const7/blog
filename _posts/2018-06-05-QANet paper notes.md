@@ -34,7 +34,7 @@ comment: true
   - model encoder layer
   - output layer
 
-![QANet 模型结构](https://img.chenkun.pro/img/2018-06-05-01.jpg)_图 1 QANet 模型结构_
+![QANet 模型结构](https://img.chenkun.pro/img/2018-06-05-01.png)_图 1 QANet 模型结构_
 
 ### Input embedding layer
 
@@ -91,11 +91,11 @@ $$
 
 　　首先是 depthwise convolution，以图 2 为例，假设输入是 64 * 64 的 3 通道图片，使用 3 * 3 * 1 大小的卷积核，filter 数量等于上一层的 depth，对输入的每个 channel 独立进行卷积运算，得到与上层 depth 相同个数的 feature map。对应到图里即 3 个 filter 分别对 3 个 channel 进行卷积，得到 3 个 feature map。
 
-![depthwise convolution](https://img.chenkun.pro/img/2018-06-05-02.jpg){:height="60%" width="60%"}_图 2 depthwise convolution_
+![depthwise convolution](https://img.chenkun.pro/img/2018-06-05-02.png){:height="60%" width="60%"}_图 2 depthwise convolution_
 
 　　然后是 pointwise convolution，和常规卷积运算类似，卷积核的尺寸为 1 * 1 * M，M 等于上一层的 depth。它会将上一步的 feature map 在深度方向上进行加权组合，生成新的 feature map，有几个 filter 就有几个 feature map。如图 3 所示，输入 depth 为 3，卷积核大小为 1 * 1 * 3，使用 4 个 filter，最终生成 4 个 feature map。
 
-![pointwise convolution](https://img.chenkun.pro/img/2018-06-05-03.jpg){:height="60%" width="60%"}_图 3 pointwise convolution_
+![pointwise convolution](https://img.chenkun.pro/img/2018-06-05-03.png){:height="60%" width="60%"}_图 3 pointwise convolution_
 
 　　直观动画见 [这里](https://www.slideshare.net/DongWonShin4/depthwise-separable-convolution)。
 
@@ -109,11 +109,11 @@ $$
 
 　　对应到 NLP 任务里，可以将句子中的每一个单词看作一个 (Key, Value) 对，则原句子可表示为一系列 (Key,Value) 对。分别计算 Query 和每一个 Key 的相似性，得到每个 Key 对应的 Value 的权重，再对 Value 进行加权求和，得到 Attention 值。
 
-![Attention 机制](https://img.chenkun.pro/img/2018-06-05-04.jpg){:height="60%" width="60%"}_图 4 Attention 机制_
+![Attention 机制](https://img.chenkun.pro/img/2018-06-05-04.png){:height="60%" width="60%"}_图 4 Attention 机制_
 
 　　目前在 NLP 任务中，Key 和 Value 一般都是同一个，即 Key=Value。而 self-attention 则更进一步，令 Q=K=V，使得对于输入的句子，它的任意两个单词之间都要计算 Attention，所以两个单词之间无论有多长距离，最大的路径长度也都只是 1 ，因此 self-attention 可以有效捕获长距离依赖关系，如图 5（来源于原论文附录部分）所示。另外 self-attention 不像 RNN 一样依赖于前一时刻的状态，因此它有利于并行计算。
 
-![可视化 self-attention](https://img.chenkun.pro/img/2018-06-05-05.jpg){:height="60%" width="60%"}_图 5 可视化 self-attention_
+![可视化 self-attention](https://img.chenkun.pro/img/2018-06-05-05.png){:height="60%" width="60%"}_图 5 可视化 self-attention_
 
 **multi-head attention**：
 
@@ -136,7 +136,7 @@ $$
 
 　　residual block 结构如图 6。假定神经网络层的输入是 $x$，期望输出是 $H(x)$，显然 $H(x)$ 学习难度是比较大的。但如果直接把输入 $x$ 传到输出作为初始结果，那么此时需要学习的目标就变成了 $F(x)=H(x)-x$，相当于将优化目标从完整输出替换为为最优解 $H(x)$ 和全等映射 $x$ 的差值，有效降低了学习难度。
 
-![residual block 结构](https://img.chenkun.pro/img/2018-06-05-06.jpg){:height="40%" width="40%"}_图 6 residual block 结构_
+![residual block 结构](https://img.chenkun.pro/img/2018-06-05-06.png){:height="40%" width="40%"}_图 6 residual block 结构_
 
 　　另外在本论文中，由于 encoder block 中每层之间还用到了 layer normalization，因此对于一个给定的输入 $x$ 和一个操作 $f$，其输出为 $f(layernorm(x))+x$。
 

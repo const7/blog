@@ -23,7 +23,7 @@ comment: true
     ```
 
     效果：
-    ![查看所有硬盘](https://img.chenkun.pro/img/2018-04-27-01.jpg){:height="70%" width="70%"}_查看所有可用硬盘_
+    ![查看所有硬盘](https://img.chenkun.pro/img/2018-04-27-01.png){:height="70%" width="70%"}_查看所有可用硬盘_
 
 2. 第一次挂载的时候需要对云盘进行格式化，之后挂载就不必格式化了，否则会清除云盘里的所有内容。
 
@@ -33,7 +33,7 @@ comment: true
 
     这里的 `/dev/vdd` 为步骤 1 查看得到的实际路径，每次可能都不一样。
 
-    ![初始化云盘](https://img.chenkun.pro/img/2018-04-27-02.jpg){:height="70%" width="70%"}_初始化云盘_
+    ![初始化云盘](https://img.chenkun.pro/img/2018-04-27-02.png){:height="70%" width="70%"}_初始化云盘_
 
 3. 创建一个目录作为该云盘的挂载点，假设目录名为 `qa_test`。
 
@@ -49,7 +49,7 @@ comment: true
     df -h
     ```
     效果：
-    ![查看挂载结果](https://img.chenkun.pro/img/2018-04-27-03.jpg){:height="70%" width="70%"}_查看挂载结果_
+    ![查看挂载结果](https://img.chenkun.pro/img/2018-04-27-03.png){:height="70%" width="70%"}_查看挂载结果_
 
 6. 更改目录所属组及所有者
 
