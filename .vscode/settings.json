@@ -1,0 +1,4 @@
+{
+    "editor.detectIndentation": false
+    // rmarkdown can't handle tab, so use 2 space in codeblock instead of tab
+}
