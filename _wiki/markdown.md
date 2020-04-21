@@ -4,13 +4,12 @@ title: Markdown 常见用法
 tags: [Markdown]
 description: Markdown 常用语法示例。
 keywords: Markdown
-mermaid: true
-sequence: true
-flow: true
 mathjax: true
 ---
 
-### Jekyll目录
+包含部分 `Kramdown` 用法，主要方便之后写博客参考。
+
+---
 
 * TOC
 {:toc}
@@ -38,13 +37,13 @@ mathjax: true
 ###### 这里是 h6
 ```
 
-### 段落
+## 段落
 
 段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落一段落
 
 段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落二段落
 
-### 超链接
+## 超链接
 
 [TMaize Blog](http://blog.tmaize.net)
 
@@ -52,7 +51,7 @@ mathjax: true
 [TMaize Blog](http://blog.tmaize.net)
 ```
 
-### 引用
+## 引用
 
 > 这里是引用
 
@@ -60,7 +59,7 @@ mathjax: true
 > 这里是引用
 ```
 
-### 常见字体样式
+## 常见字体样式
 
 _斜体_
 
@@ -74,7 +73,7 @@ _斜体_
 ~~删除线~~
 ```
 
-### 列表
+## 列表
 
 - 无序列表 1-1
 
@@ -140,7 +139,7 @@ _斜体_
 - [ ] 任务列表 2
 ```
 
-### 分割线
+## 分割线
 
 ---
 
@@ -148,7 +147,7 @@ _斜体_
 ---
 ```
 
-### 图片
+## 图片
 
 ![QANet 模型结构](https://img.chenkun.pro/img/2018-06-05-01.png){:height="50%" width="50%"}_图 1 QANet 模型结构_
 
@@ -159,7 +158,7 @@ _斜体_
 // 阿里云oss自带放缩会同时压缩画质
 ```
 
-### 代码行
+## 代码行
 
 这是一段文字 `rm -rf /*` 这是一段文字
 
@@ -167,7 +166,7 @@ _斜体_
 这是一段文字`rm -rf /*`这是一段文字
 ```
 
-### 代码块
+## 代码块
 
 ```javascript
 blog.encodeHtml = function(html) {
@@ -191,7 +190,7 @@ return temp
 ```
 ````
 
-### 表格
+## 表格
 
 | HEADER1 | HEADER2 | HEADER3 | HEADER4 |
 | ------- | :------ | :-----: | ------: |
@@ -207,7 +206,7 @@ return temp
 2. :----: 表示中对齐
 3. -----: 表示右对齐
 
-### 数学公式
+## 数学公式
 
 这是一行话 $\( \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \)$ 这是一行话
 
@@ -218,7 +217,7 @@ R_{\mu \nu} - {1 \over 2}g_{\mu \nu}\,R + g_{\mu \nu} \Lambda
 = {8 \pi G \over c^4} T_{\mu \nu}
 $$
 
-### 锚点
+## 锚点
 
 ```
 * [目录](#目录)
@@ -226,17 +225,17 @@ $$
 
 * [目录](#目录)
 
-### Emoji
+## Emoji
 
 :camel:
 :blush:
 :smile:
 
-### inline gist
+## inline gist
 
 由于网络原因暂时不使用
 
-### Footnotes
+## Footnotes
 
 This is a text with footnote[^1].
 
@@ -244,7 +243,7 @@ This is a text with footnote[^1].
 This is a text with footnote[^1].
 ```
 
-### 插入 html
+## 插入 html
 
 <div id="htmldemo"></div>
 <style>
@@ -294,7 +293,7 @@ This is a text with footnote[^1].
 </style>
 ```
 
-### 插入 iframe
+## 插入 iframe
 
 <iframe
   src="https://music.163.com/outchain/player?type=2&id=29732733&auto=0&height=66"
