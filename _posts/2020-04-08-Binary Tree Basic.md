@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 二叉树基本操作
-tags: [Data Structure, Algorithm]
+tags: [Data Structure]
 description: 二叉树常用操作
 keywords: Binary Tree, Data Structure, Algorithm
 mathjax: false
