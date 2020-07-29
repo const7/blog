@@ -9,18 +9,17 @@ permalink: /about
 
 ## Interest
 
-- C/C++ && Python
-- Alogrithm
+- Deep Learning
 - Machine Learning
+- Computational Neuroscience
 - Natural Language Processing
-- Operating System
-- Psychology
+- Social Network Analysis
 
 ## Contact
 
 - GitHub: [const7](https://github.com/const7)
 
-- Email: const@chenkun.pro
+- Email: <const@chenkun.pro>
 
 <!-- ## GitHub Chart
 
