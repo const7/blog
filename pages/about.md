@@ -10,10 +10,10 @@ permalink: /about
 ## Interest
 
 - Deep Learning
-- Machine Learning
-- Computational Neuroscience
+- Cognitive Neuroscience
+- Neural Signal Processing
 - Natural Language Processing
-- Social Network Analysis
+- Network Analysis
 
 ## Contact
 
