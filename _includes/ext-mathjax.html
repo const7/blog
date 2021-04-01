@@ -1,19 +1,13 @@
 <!-- MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      <!-- inlineMath: [ ['$','$'], ["\\(","\\)"] ], 行内公式选择符 -->
-      inlineMath:  [ ["$", "$"] ],
-      <!-- displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 段内公式选择符 -->
-      displayMath: [ ["$$","$$"] ],
-      processEscapes: true
-    },
-    TeX: { equationNumbers: { autoNumber: "all" } },
-    "HTML-CSS": { availableFonts: ["TeX"] },
-    <!-- displayAlign: "left" -->
-  });
+<script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        packages: ['base', 'ams']
+      },
+      loader: {
+        load: ['ui/menu', '[tex]/ams']
+      }
+    };
 </script>
-
-<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
