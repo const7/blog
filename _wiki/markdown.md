@@ -181,7 +181,7 @@ blog.encodeHtml = function(html) {
 ```
 
 ````
-```javascript
+​```javascript
 blog.encodeHtml = function(html) {
 var o = document.createElement('div')
 o.innerText = html
@@ -198,7 +198,7 @@ return temp
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
 
-```md
+​```md
 | HEADER1 | HEADER2 | HEADER3 | HEADER4 |
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
@@ -315,6 +315,3 @@ This is a text with footnote[^1].
 
 [^1]: Here is the footnote 1 definition.
 
-```md
-This is a text with footnote[^1].
-```
