@@ -34,7 +34,7 @@
   }
 
   &-line {
-    @include transition(all .3s ease-out);
+    // @include transition(all .3s ease-out);
     border-top: .2rem solid $default-color;
     display: block;
     width: 2rem;
@@ -51,7 +51,7 @@
 }
 
 .tags {
-  @include transition(all .2s ease-out);
+//   @include transition(all .2s ease-out);
   color: $default-tint;
   font-family: $serif-primary;
   font-size: .8rem;

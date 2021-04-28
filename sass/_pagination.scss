@@ -11,7 +11,7 @@
   }
 
   .top {
-    @include transition(all .3s ease-out);
+    // @include transition(all .3s ease-out);
     color: $default-color;
     font-family: $serif-secondary;
     font-size: 1.1rem;
@@ -23,7 +23,7 @@
   }
 
   .arrow {
-    @include transition(all .3s ease-out);
+    // @include transition(all .3s ease-out);
     color: $default-color;
     position: absolute;
 

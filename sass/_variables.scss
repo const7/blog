@@ -17,11 +17,11 @@ $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
           box-sizing: $type;
 }
 
-@mixin transition($args...) {
-  -webkit-transition: $args;
-     -moz-transition: $args;
-          transition: $args;
-}
+// @mixin transition($args...) {
+//   -webkit-transition: $args;
+//      -moz-transition: $args;
+//           transition: $args;
+// }
 
 /////////////////////////////////////////////////////////// from cayman theme ///////////////////////////////
 // Headers
