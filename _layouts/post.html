@@ -8,7 +8,7 @@ layout: default
     <time datetime="{{ page.date }}" class="post-info-time">{{ page.date | date: "%Y/%m/%d" }}</time>
     {% for cat in page.tags %}
     <span class="tags">
-      <a href="{{ site.url }}/tags#{{ cat }}" title="{{ cat }}">#{{ cat }}</a>
+      <a href="{{ site.baseurl }}/tags#{{ cat }}" title="{{ cat }}">#{{ cat }}</a>
     </span>
     {% endfor %}
   </div>

@@ -2,7 +2,7 @@
 title:          const
 description:    "Blog about study and life."
 baseurl:        ""
-url:            "https://blog.chenkun.pro"
+# url:            "https://blog.chenkun.pro"
 
 # 菜单
 menu:

@@ -8,6 +8,6 @@ permalink: /wiki
 
 {% for wiki in site.wiki %}
 {% if wiki.title != "Wiki Template" %}
-  <li class="wiki-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}</a></li>
+  <li class="wiki-item"><a href="{{ site.baseurl }}{{ wiki.url }}">{{ wiki.title }}</a></li>
 {% endif %}
 {% endfor %}
