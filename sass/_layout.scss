@@ -1,25 +1,28 @@
 .container {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: $max-width;
   width: 80%;
   margin-bottom: 2rem;
 }
 
-.nav-container {
-  display: block;
-  margin: 0 auto;
-  max-width: 850px;
-  width: 80%;
-}
+// .nav-container {
+//   display: block;
+//   margin: 0 auto;
+//   max-width: $max-width;
+//   width: 80%;
+// }
 
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
 
   &-container {
+    display: block;
     margin: 1rem auto .5rem;
     position: relative;
     text-align: center;
+    max-width: $max-width;
+    width: 80%;
   }
 
   &-title {
@@ -27,8 +30,7 @@
     color: $default-color;
     display: inline-block;
     margin: 0;
-    font-size: 2rem;
-    font-weight: normal;
+    font-size: 2.5rem;
 
     &:hover,
     &:focus {
@@ -38,7 +40,7 @@
 
   ul {
     list-style-type: none;
-    margin: 0 0 .7rem 0;
+    // margin: 0 0 .7rem 0;
     text-align: center;
   }
 
@@ -61,7 +63,7 @@
 
   a {
     color: $default-color;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: $serif-secondary;
   }
 }

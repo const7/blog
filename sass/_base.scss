@@ -28,7 +28,7 @@ main {
   // flex布局
   flex: 1;
   margin: 0 auto;
-  max-width: 850px;
+  max-width: $max-width;
   width: 80%;
 }
 
@@ -39,7 +39,7 @@ footer {
 
   display: block;
   margin: 0 auto;
-  max-width: 850px;
+  max-width: $max-width;
   width: 100%;
 
   span {
@@ -189,7 +189,7 @@ dfn {
 
 h1 {
   font-size: 2rem;
-  margin: 0.67em 0;
+  margin: 0.67rem 0;
 }
 
 /**
