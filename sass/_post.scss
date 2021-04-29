@@ -219,6 +219,8 @@
 // valine comment title
 #vcomment::before {
   content: "Comments";
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $title-color;
   margin: 0 auto .5rem;
 }
