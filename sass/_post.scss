@@ -23,11 +23,11 @@
   &-title {
     color: $default-color;
     font-family: $serif-secondary;
-    margin: 0 0 .3em;
+    margin: 0 0 .3rem;
     text-align: left;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
 
   a:hover {
@@ -133,35 +133,36 @@
 
   // title
   h1 {
+    color: $title-color;
     font-size: 2em;
   }
 
   h2 {
     color: $title-color;
-    font-size: 1.5em;
-    margin: .6em 0 .3em 0;
+    font-size: 1.5rem;
+    margin: .6rem 0 .3rem 0;
     border-bottom: 1px solid $grey;
   }
   
   h3 {
     color: $title-color;
-    font-size: 1.25em;
-    margin: .6em 0 .3em 0;
+    font-size: 1.25rem;
+    margin: .6rem 0 .3rem 0;
   }
   
   h4 {
     font-size: 1em;
-    margin: .6em 0 .3em 0;
+    margin: .6rem 0 .3rem 0;
   }
   
   h5 {
-    font-size: 0.875em;
-    margin: .6em 0 .3em 0;
+    font-size: 0.875rem;
+    margin: .6rem 0 .3rem 0;
   }
   
   h6 {
-    font-size: 0.85em;
-    margin: .6em 0 .3em 0;
+    font-size: 0.85rem;
+    margin: .6rem 0 .3rem 0;
   }
 
   // automatic numbering

@@ -6,9 +6,8 @@ $grey: #e5e5e5;
 $shadow-color: rgba(0, 0, 0, .2);
 
 // Fonts
-$serif-primary: Arial, "Microsoft YaHei Ui", simsum,Helvetica,sans-serif;
+$serif-primary: "Microsoft YaHei Ui", simsum,Helvetica,sans-serif;
 $serif-secondary: "Microsoft YaHei", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif-secondary: "Microsoft YaHei", 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 @mixin box-sizing($type: border-box) {
