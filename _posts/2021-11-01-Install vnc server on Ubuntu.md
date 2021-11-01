@@ -63,6 +63,7 @@ comment: true
     #!/bin/sh
     unset SESSION_MANAGER
     unset DBUS_SESSION_BUS_ADDRESS
+    export PATH=/usr/bin:$PATH # promote priority of /usr/bin, aviod conda problem
     export XKL_XMODMAP_DISABLE=1
     export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
     export XDG_MENU_PREFIX="gnome-flashback-"
@@ -81,7 +82,7 @@ comment: true
 
 ### 启动
 
-> !!! 执行启动 VNC 的命令之前一定要退出 conda 的 `base` 或者任何虚拟环境，不然有可能某些包你装了但是提示找不到或者启动失败。
+> 如果配置文件中没有添加 `export PATH=/usr/bin:$PATH`，启动 VNC 之前一定要退出 conda 的 `base` 或者任何虚拟环境，不然有可能某些包你装了但是提示找不到或者启动失败，详情可参考上述 VNC 配置链接。
 
 ```shell
 vncserver
