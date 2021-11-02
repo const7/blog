@@ -71,8 +71,6 @@ comment: true
     [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
     xsetroot -solid grey
     vncconfig -iconic &
-    gnome-terminal &
-    nautilus &
     gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
     ```
 
@@ -88,7 +86,29 @@ comment: true
 vncserver
 ```
 
-如果启动后发现不正常可能是因为某些包没有安装，在 `~/.vnc/*.log` 里会看到提示，手动安装就行。`-localhost no` 表示允许非局域网用户访问，如果碰上学校网络坑爹可能需要加上这个。
+启动后会提示你目前用的是哪个端口，比如 `New 'xxxx' desktop at :2 ....` 即为 `5902`（默认从 `5900` 开始）。
+
+如果启动后发现 VNC viewer 显示不正常可能是因为某些包没有安装，在 `~/.vnc/*.log` 里会看到提示，手动安装就行。`-localhost no` 表示允许非局域网用户访问，如果碰上学校网络坑爹可能需要加上这个。
+
+### 其他问题
+
+启动时碰到的一个报错 `vncserver: /usr/bin/Xtigervnc did not start up, please look into '/home/xxx/.vnc/yyy:1.log' to determine the reason! -2`，查看 `/home/xxx/.vnc/yyy:1.log` 发现是如下内容：
+
+```bash
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE)
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE)
+```
+
+解决办法：手动创建一个 X1 文件并设置权限，原理未知
+
+```bash
+mkdir /tmp/.X11-unix
+touch /tmp/.X11-unix/X1
+chmod 777 /tmp/.X11-unix/X1
+```
 
 ### 常用命令
 
