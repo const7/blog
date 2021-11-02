@@ -94,7 +94,7 @@ vncserver
 
 启动时碰到的一个报错 `vncserver: /usr/bin/Xtigervnc did not start up, please look into '/home/xxx/.vnc/yyy:1.log' to determine the reason! -2`，查看 `/home/xxx/.vnc/yyy:1.log` 发现是如下内容：
 
-```bash
+```shell
 _XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
 _XSERVTransMakeAllCOTSServerListeners: server already running
 (EE)
@@ -104,7 +104,7 @@ Fatal server error:
 
 解决办法：手动创建一个 X1 文件并设置权限，原理未知
 
-```bash
+```shell
 mkdir /tmp/.X11-unix
 touch /tmp/.X11-unix/X1
 chmod 777 /tmp/.X11-unix/X1
