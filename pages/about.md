@@ -19,7 +19,7 @@ permalink: /about
 
 - GitHub: [const7](https://github.com/const7)
 
-- Email: <const@chenkun.pro>
+- Email: <chenkun_@outlook.com>
 
 <!-- ## GitHub Chart
 
