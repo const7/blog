@@ -88,7 +88,7 @@ vncserver
 
 启动后会提示你目前用的是哪个端口，比如 `New 'xxxx' desktop at :2 ....` 即为 `5902`（默认从 `5900` 开始）。
 
-如果启动后发现 VNC viewer 显示不正常可能是因为某些包没有安装，在 `~/.vnc/*.log` 里会看到提示，手动安装就行。`-localhost no` 表示允许非局域网用户访问，如果碰上学校网络坑爹可能需要加上这个。
+如果启动后发现 VNC viewer 显示不正常可能是因为某些包没有安装，在 `~/.vnc/*.log` 里会看到提示，手动安装就行。
 
 ### 其他问题
 
@@ -130,4 +130,10 @@ chmod 777 /tmp/.X11-unix/X1
 
     ```shell
     vncserver -geometry 1920x1080
+    ```
+
+4. 允许非局域网用户访问，碰上学校网络坑爹可能需要加上这个
+
+    ```shell
+    vncserver -localhost no
     ```
