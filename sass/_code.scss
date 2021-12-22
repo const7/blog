@@ -40,15 +40,15 @@ pre {
     word-break: normal;
   }
 
-  // .lineno {
-  //   color: $default-tint;
-  //   display: inline-block; // Ensures the null space also isn't selectable
-  //   padding: .75rem 0 .25rem;
-  //   // Make sure numbers aren't selectable
-  //   -webkit-user-select: none;
-  //      -moz-user-select: none;
-  //           user-select: none;
-  // }
+  .lineno {
+    color: white;
+    display: inline-block; // Ensures the null space also isn't selectable
+    padding: .75rem 0 .25rem;
+    // Make sure numbers aren't selectable
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
 }
 
 .highlight pre,
