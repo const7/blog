@@ -180,17 +180,15 @@ blog.encodeHtml = function(html) {
 }
 ```
 
-````
-​```javascript
+```javascript
 blog.encodeHtml = function(html) {
-var o = document.createElement('div')
-o.innerText = html
-var temp = o.innerHTML
-o = null
-return temp
+  var o = document.createElement('div')
+  o.innerText = html
+  var temp = o.innerHTML
+  o = null
+  return temp
 }
 ```
-````
 
 ## 表格
 
@@ -198,7 +196,7 @@ return temp
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
 
-​```md
+```
 | HEADER1 | HEADER2 | HEADER3 | HEADER4 |
 | ------- | :------ | :-----: | ------: |
 | content | content | content | content |
