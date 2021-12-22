@@ -220,10 +220,10 @@ $$
 ## 锚点
 
 ```
-* [目录](#目录)
+* [引用](#引用)
 ```
 
-* [目录](#目录)
+* [引用](#引用)
 
 ## Emoji
 
@@ -231,9 +231,13 @@ $$
 :blush:
 :smile:
 
-## inline gist
+## Inline gist
 
-由于网络原因暂时不使用
+<script src="https://gist.github.com/const7/51e558dcdb4a5971f380890378c944f0.js"></script>
+
+```javascript
+<script src="https://gist.github.com/const7/51e558dcdb4a5971f380890378c944f0.js"></script>
+```
 
 ## Footnotes
 
@@ -313,3 +317,6 @@ This is a text with footnote[^1].
 
 [^1]: Here is the footnote 1 definition.
 
+```
+[^1]: Here is the footnote 1 definition.
+```
