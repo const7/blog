@@ -18,13 +18,13 @@ comment: true
 
 > Current os version: Ubuntu 20.04 focal
 
-## Step 1: Install ifupdown
+## Install ifupdown
 
 ```bash
 sudo apt install ifupdown net-tools
 ```
 
-## Step 2: Configuration
+## Configuration
 
 1. `wpa_supplicant` configuration for the network.
 
@@ -65,7 +65,7 @@ sudo apt install ifupdown net-tools
     wpa-conf /etc/wpa_supplicant/wpa_supplicant_enp0s31f6.conf
     ```
 
-## Step 3: Disable current network manager
+## Disable current network manager
 
 Disable any services related to `systemd-networkd` and `NetworkManager`, like:
 
@@ -80,11 +80,11 @@ sudo systemctl stop systemd-networkd.service
 sudo systemctl disable systemd-networkd.service
 ```
 
-## Step 4: Reboot
+## Reboot
 
 Reboot and check whether it can automatically connect to the network.
 
-### Reference
+## Reference
 
 1. [How to switch back networking to /etc/network/interfaces on Ubuntu 20.04 Focal Fossa Linux
 ](https://linuxconfig.org/how-to-switch-back-networking-to-etc-network-interfaces-on-ubuntu-20-04-focal-fossa-linux)
