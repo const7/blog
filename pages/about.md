@@ -9,9 +9,9 @@ permalink: /about
 
 ## Interest
 
-- Deep Learning
 - Cognitive Neuroscience
-- Neural Signal Processing
+- Computational modeling
+- Deep Learning
 - Natural Language Processing
 - Network Analysis
 
