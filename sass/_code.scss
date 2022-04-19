@@ -25,7 +25,7 @@ pre {
     font-size: 1rem;
     color: $block-code-text-color;
     word-break: normal;
-    white-space: pre;
+    white-space: pre-wrap;
     background: transparent;
     border: 0;
   }
