@@ -11,7 +11,6 @@ permalink: /about
 
 - Cognitive Neuroscience
 - Computational modeling
-- Deep Learning
 - Natural Language Processing
 - Network Analysis
 
