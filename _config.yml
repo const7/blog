@@ -58,6 +58,7 @@ valine:
   verify: false # Verification code
   avatar: monsterid  # gravatar style
   # pageSize: 10 # pagination size
+  serverURLs: https://leiv1vk2.api.lncldglobal.com
 
   ## not sure how to set in _config.yml
   # meta is set in _include/ext-comment.html
