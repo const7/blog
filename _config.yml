@@ -13,7 +13,7 @@ menu:
   - title: Wiki
     url: /wiki
   - title: About
-    url: /about
+    url: https://chenkun.me
 
 collections:
   wiki:
