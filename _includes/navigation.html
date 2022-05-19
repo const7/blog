@@ -4,9 +4,9 @@
       <div class="nav-title">{{ site.title }}</div>
     </a>
     <ul>
-      {% for menu in site.menu -%}
-        <li><a href="{{ site.baseurl }}{{ menu.url }}">{{ menu.title }}</a></li>
-      {% endfor -%}
+      {% for menu in site.menu %}
+      <li><a href="{{ site.baseurl }}{{ menu.url }}">{{ menu.title }}</a></li>
+      {% endfor %}
       <li><a href="{{ site.domainUrl | append: site.baseurl }}/assets/xml/rss.xml">RSS</a></li>
     </ul>
   </div>
