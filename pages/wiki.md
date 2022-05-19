@@ -1,13 +1,21 @@
 ---
-layout: wiki
+layout: notpost
 title: Wiki
 permalink: /wiki
 ---
 
-> 常用操作/工具等。
+<section class="container">
 
-{% for wiki in site.wiki %}
-{% if wiki.title != "Wiki Template" %}
-  <li class="wiki-item"><a href="{{ site.baseurl }}{{ wiki.url }}">{{ wiki.title }}</a></li>
-{% endif %}
-{% endfor %}
+    <!-- description -->
+    <blockquote>
+    <p>常用操作/工具等。</p>
+    </blockquote>
+
+    <!-- wiki list -->
+    {% for wiki in site.wiki %}
+    {% if wiki.title != "Wiki Template" %}
+      <li class="wiki-item"><a href="{{ site.baseurl }}{{ wiki.url }}">{{ wiki.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+</section>

@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: notpost
 title: Markdown 常见用法
 tags: [Markdown]
 description: Markdown 常用语法示例。

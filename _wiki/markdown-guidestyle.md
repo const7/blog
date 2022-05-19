@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: notpost
 title: Markdown 编写规范
 tags: [Markdown]
 description: Markdown 常用语法示例。
@@ -76,16 +76,16 @@ NOT」,「SHOULD」,「SHOULD NOT」,「RECOMMENDED」,「MAY」和「OPTIONAL�
 * 表格的写法应该「SHOULD」参考 [GFM](https://help.github.com/articles/github-flavored-markdown)，如下所示：
 
     ```
-    First Header  | Second Header
-    ------------- | -------------
-    Content Cell  | Content Cell
-    Content Cell  | Content Cell
+    | First Header | Second Header |
+    | ------------ | ------------- |
+    | Content Cell | Content Cell  |
+    | Content Cell | Content Cell  |
 
     | Left-Aligned  | Center Aligned  | Right Aligned |
-    | :------------ |:---------------:| -----:|
-    | col 3 is      | some wordy text | $1600 |
-    | col 2 is      | centered        |   $12 |
-    | zebra stripes | are neat        |    $1 |
+    | :------------ | :-------------: | ------------: |
+    | col 3 is      | some wordy text |         $1600 |
+    | col 2 is      |    centered     |           $12 |
+    | zebra stripes |    are neat     |            $1 |
     ```
 
 * 中英文混排应该「SHOULD」采用如下规则：
@@ -337,7 +337,7 @@ Microsoft 有个 [`-ms-text-autospace`](http://msdn.microsoft.com/en-us/library/
 ### 工具
 
 | 仓库                                                                                                                            | 语言            |
-|---------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| ------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | [vinta/paranoid-auto-spacing](https://github.com/vinta/paranoid-auto-spacing)                                                   | JavaScript      |
 | [huei90/pangu.node](https://github.com/huei90/pangu.node)                                                                       | Node.js         |
 | [huacnlee/auto-correct](https://github.com/huacnlee/auto-correct)                                                               | Ruby            |

@@ -7,7 +7,7 @@ domainUrl:      "https://blog.chenkun.me"
 # 菜单
 menu:
   - title: Archives
-    url: /
+    url: /archives
   - title: Tags
     url: /tags
   - title: Wiki
