@@ -6,9 +6,12 @@
 html {
   height: 100%;
   text-rendering: optimizeLegibility;
-  font-family: $serif-primary; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: $serif-primary;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: $body-text-color;
-  background-color:$body-background-color;
+  background-color: $body-background-color;
   -webkit-text-size-adjust: 100%;
   // flex布局
   min-height: 100%;
@@ -57,7 +60,7 @@ footer {
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
-//   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  //   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -66,7 +69,7 @@ footer {
     border-color: rgba(255, 255, 255, 0.3);
   }
 
-  + .btn {
+  +.btn {
     margin-left: 1rem;
   }
 }
@@ -105,8 +108,10 @@ audio,
 canvas,
 progress,
 video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
 }
 
 /**
@@ -312,9 +317,12 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
 }
 
 /**
@@ -346,11 +354,14 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],
+/* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
 }
 
 /**
@@ -391,8 +402,10 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -413,7 +426,9 @@ input[type="number"]::-webkit-outer-spin-button {
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
   box-sizing: content-box;
 }
 
@@ -444,8 +459,10 @@ fieldset {
  */
 
 legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -481,4 +498,9 @@ table {
 td,
 th {
   padding: 0;
+}
+
+ol,
+ul {
+  padding-left: 1rem;
 }
