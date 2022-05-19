@@ -5,9 +5,12 @@
     </a>
     <ul>
       {% for menu in site.menu %}
+      {% if menu.title == "About" or menu.title == "RSS" %}
+      <li><a href="{{ site.baseurl }}{{ menu.url }}" target="_blank">{{ menu.title }}</a></li>
+      {% else %}
       <li><a href="{{ site.baseurl }}{{ menu.url }}">{{ menu.title }}</a></li>
+      {% endif %}
       {% endfor %}
-      <li><a href="{{ site.domainUrl | append: site.baseurl }}/assets/xml/rss.xml">RSS</a></li>
     </ul>
   </div>
 </nav>
