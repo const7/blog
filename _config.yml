@@ -27,7 +27,7 @@ plugins:
   - jemoji
 
 # Permalinks
-permalink: /blog/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 
 # kramdown
 kramdown:
