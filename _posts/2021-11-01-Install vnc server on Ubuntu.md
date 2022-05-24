@@ -28,7 +28,7 @@ comment: true
 
 用来显示图形界面的，在这里分两种，一是服务器本身的桌面环境，二是你想在 VNC 里使用的桌面环境。服务器本身可以安装多种桌面环境，使用 VNC 时需要在配置里指定其中一种。
 
-目前 ubuntu 自带桌面环境只有 gnome，常见的环境包括 gnome，kde，xfce 等。xfce 相对比较轻量，但是丑，ubuntu 默认带了 gnome，所以这里我们选择 gnome 作为 vnc 的桌面环境。
+常见的环境包括 gnome，kde，xfce 等。xfce 相对比较轻量，但是丑，ubuntu 默认用的 gnome，所以这里我们选择 gnome 作为 vnc 的桌面环境。
 
 ## 安装
 
@@ -136,4 +136,10 @@ chmod 777 /tmp/.X11-unix/X1
 
     ```shell
     vncserver -localhost no
+    ```
+
+5. 综合版
+
+    ```shell
+    vncserver -geometry 1920x1080 -localhost no
     ```
