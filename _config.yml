@@ -55,9 +55,7 @@ compress_html:
 valine:
   appid:  lEIv1VK2U7GjS8qxH71A5nkS-MdYXbMMI # your leancloud app id
   appkey: 2G2miTD0y1N95pWubaI1UgqG # your leancloud app key
-  placeholder: Leave your message here # comment box placeholder
-  notify: false # mail notifier
-  verify: false # Verification code
+  placeholder: Leave your message here. Nickname and email are not necessary. # comment box placeholder
   avatar: monsterid  # gravatar style
   # pageSize: 10 # pagination size
   serverURLs: https://leiv1vk2.api.lncldglobal.com
