@@ -112,7 +112,13 @@ chmod 777 /tmp/.X11-unix/X1
 
 ### 常用命令
 
-1. 指定端口启动，比如从 `5902` 端口启动
+1. 查看当前已开启 vnc 端口
+
+    ```shell
+    vncserver -list
+    ```
+
+2. 指定端口启动，比如从 `5902` 端口启动
 
     ```shell
     vncserver :2
@@ -120,25 +126,25 @@ chmod 777 /tmp/.X11-unix/X1
 
     `vncserver :3` 则为 `5903` 端口启动。
 
-2. 关闭某个端口进程，比如 `5902`
+3. 关闭某个端口进程，比如 `5902`
 
     ```shell
     vncserver -kill :2
     ```
 
-3. 指定分辨率（仅本次运行期间有效）
+4. 指定分辨率（仅本次运行期间有效）
 
     ```shell
     vncserver -geometry 1920x1080
     ```
 
-4. 允许非局域网用户访问，碰上学校网络坑爹可能需要加上这个
+5. 允许非局域网用户访问，碰上学校网络坑爹可能需要加上这个
 
     ```shell
     vncserver -localhost no
     ```
 
-5. 综合版
+6. 综合版
 
     ```shell
     vncserver -geometry 1920x1080 -localhost no
