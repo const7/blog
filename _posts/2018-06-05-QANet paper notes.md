@@ -30,6 +30,7 @@ comment: true
 ## Model
 
 模型由五层结构组成：
+
   - input embedding layer
   - embedding encoder layer
   - context-query attention layer

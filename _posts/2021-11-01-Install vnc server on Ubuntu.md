@@ -32,49 +32,47 @@ comment: true
 
 ## 安装
 
-1. 安装 TigerVNC（会自动帮你安装其它依赖包）
+安装 TigerVNC（会自动帮你安装其它依赖包）
 
-    ```shell
-    sudo apt install tigervnc-standalone-server
-    ```
+```shell
+sudo apt install tigervnc-standalone-server
+```
 
-2. 设置登陆密码
+设置登陆密码
 
-    ```shell
-    vncpasswd
-    ```
+```shell
+vncpasswd
+```
 
-    > Would you like to enter a view-only password (y/n)? **n**
+> Would you like to enter a view-only password (y/n)? **n**
 
 ## 配置
 
-1. 创建配置文件并赋予执行权限
+创建配置文件并赋予执行权限
 
-    ```shell
-    touch ~/.vnc/xstartup
-    chmod 775 ~/.vnc/xstartup
-    ```
+```shell
+touch ~/.vnc/xstartup
+chmod 775 ~/.vnc/xstartup
+```
 
-2. 写入配置文件
+将下面内容写入到配置文件 `~/.vnc/xstartup` 里：
 
-    将下面内容写入到 `~/.vnc/xstartup` 里：
+```shell
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export PATH=/usr/bin:$PATH # promote priority of /usr/bin, aviod conda problem
+export XKL_XMODMAP_DISABLE=1
+export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
+export XDG_MENU_PREFIX="gnome-flashback-"
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+vncconfig -iconic &
+gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
+```
 
-    ```shell
-    #!/bin/sh
-    unset SESSION_MANAGER
-    unset DBUS_SESSION_BUS_ADDRESS
-    export PATH=/usr/bin:$PATH # promote priority of /usr/bin, aviod conda problem
-    export XKL_XMODMAP_DISABLE=1
-    export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
-    export XDG_MENU_PREFIX="gnome-flashback-"
-    [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
-    [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
-    xsetroot -solid grey
-    vncconfig -iconic &
-    gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
-    ```
-
-    > 配置这里是最坑的，配置有问题很容易在启动后碰到黑屏灰屏等奇奇怪怪的状况，而且 log 基本没什么参考价值。关于配置文件一些细节跟注意事项可参考 [VNC server配置](https://segmentfault.com/a/1190000022707961)。
+> 配置这里是最坑的，配置有问题很容易在启动后碰到黑屏灰屏等奇奇怪怪的状况，而且 log 基本没什么参考价值。关于配置文件一些细节跟注意事项可参考 [VNC server配置](https://segmentfault.com/a/1190000022707961)。
 
 ## 运行
 
@@ -112,40 +110,22 @@ chmod 777 /tmp/.X11-unix/X1
 
 ### 常用命令
 
-1. 查看当前已开启 vnc 端口
+```shell
+# 1. 查看当前已开启 vnc 端口
+vncserver -list
 
-    ```shell
-    vncserver -list
-    ```
+# 2. 指定端口启动，比如从 5902 端口启动（默认从 5900 开始）
+vncserver :2
 
-2. 指定端口启动，比如从 `5902` 端口启动
+# 3. 关闭某个端口进程，比如 5902
+vncserver -kill :2
 
-    ```shell
-    vncserver :2
-    ```
+# 4. 指定分辨率（仅本次运行期间有效）
+vncserver -geometry 1920x1080
 
-    `vncserver :3` 则为 `5903` 端口启动。
+# 5. 允许非局域网用户访问，碰上学校网络坑爹可能需要加上这个
+vncserver -localhost no
 
-3. 关闭某个端口进程，比如 `5902`
-
-    ```shell
-    vncserver -kill :2
-    ```
-
-4. 指定分辨率（仅本次运行期间有效）
-
-    ```shell
-    vncserver -geometry 1920x1080
-    ```
-
-5. 允许非局域网用户访问，碰上学校网络坑爹可能需要加上这个
-
-    ```shell
-    vncserver -localhost no
-    ```
-
-6. 综合版
-
-    ```shell
-    vncserver -geometry 1920x1080 -localhost no
-    ```
+# 6. 综合版
+vncserver -geometry 1920x1080 -localhost no
+```

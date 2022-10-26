@@ -40,124 +40,124 @@ struct TreeNode {
 
 ### 前序遍历
 
-1. 递归实现
-   
-   先访问根节点，然后依次访问左子树和右子树。
-   
-   ```cpp
-   void preorder_rec(TreeNode *root) {
-       if (root) {
-           std::cout << root->data << " ";
-           preorder_rec(root->left);
-           preorder_rec(root->right);
-       }
-   }
-   ```
+#### 递归实现
 
-2. 非递归实现
-   
-   使用栈保存路径上经过的节点（并访问输出），向左访问到最左子节点后弹出，然后访问右子树。
-   
-   ```cpp
-   void preorder_nonrec(TreeNode *root) {
-       std::stack<TreeNode *> nodes;
-       while (root || !nodes.empty()) {
-           while (root) {
-               std::cout << root->data << " ";
-               nodes.push(root);
-               root = root->left;
-           }
-           root = nodes.top();
-           nodes.pop();
-           root = root->right;
-       }
-   }
-   ```
+先访问根节点，然后依次访问左子树和右子树。
+
+```cpp
+void preorder_rec(TreeNode *root) {
+    if (root) {
+        std::cout << root->data << " ";
+        preorder_rec(root->left);
+        preorder_rec(root->right);
+    }
+}
+```
+
+#### 非递归实现
+
+使用栈保存路径上经过的节点（并访问输出），向左访问到最左子节点后弹出，然后访问右子树。
+
+```cpp
+void preorder_nonrec(TreeNode *root) {
+    std::stack<TreeNode *> nodes;
+    while (root || !nodes.empty()) {
+        while (root) {
+            std::cout << root->data << " ";
+            nodes.push(root);
+            root = root->left;
+        }
+        root = nodes.top();
+        nodes.pop();
+        root = root->right;
+    }
+}
+```
 
 ### 中序遍历
 
-1. 递归实现
-   
-    先访问左子树，然后访问根节点，最后访问右子树。
+#### 递归实现
 
-    ```cpp
-    void inorder_rec(TreeNode *root) {
-        if (root) {
-            inorder_rec(root->left);
-            std::cout << root->data << " ";
-            inorder_rec(root->right);
-        }
+先访问左子树，然后访问根节点，最后访问右子树。
+
+```cpp
+void inorder_rec(TreeNode *root) {
+    if (root) {
+        inorder_rec(root->left);
+        std::cout << root->data << " ";
+        inorder_rec(root->right);
     }
-    ```
+}
+```
 
-2. 非递归实现
+#### 非递归实现
 
-    跟前序非递归类似，但访问时机不一样。使用栈保存路径上经过的节点，向左访问到最左子节点后弹出（并访问输出），然后访问右子树。
+跟前序非递归类似，但访问时机不一样。使用栈保存路径上经过的节点，向左访问到最左子节点后弹出（并访问输出），然后访问右子树。
 
-    ```cpp
-    void inorder_nonrec(TreeNode *root) {
-        std::stack<TreeNode *> nodes;
-        while (root || !nodes.empty()) {
-            while (root) {
-                nodes.push(root);
-                root = root->left;
-            }
-            root = nodes.top();
-            nodes.pop();
-            std::cout << root->val << " ";
-            root = root->right;
+```cpp
+void inorder_nonrec(TreeNode *root) {
+    std::stack<TreeNode *> nodes;
+    while (root || !nodes.empty()) {
+        while (root) {
+            nodes.push(root);
+            root = root->left;
         }
+        root = nodes.top();
+        nodes.pop();
+        std::cout << root->val << " ";
+        root = root->right;
     }
-    ```
+}
+```
 
 ### 后序遍历
 
-1. 递归实现
-   
-   先访问左子树，然后访问右子树，最后访问根节点。
+#### 递归实现
 
-   ```cpp
-   void postorder_rec(TreeNode *root) {
-       if (root) {
-           postorder_rec(root->left);
-           postorder_rec(root->right);
-           std::cout << root->val << " ";
-       }
-   }
-   ```
+先访问左子树，然后访问右子树，最后访问根节点。
 
-2. 非递归实现
+```cpp
+void postorder_rec(TreeNode *root) {
+    if (root) {
+        postorder_rec(root->left);
+        postorder_rec(root->right);
+        std::cout << root->val << " ";
+    }
+}
+```
 
-   由于根节点需要在右子树访问完之后才访问，因此需要用一个变量保存上一次访问的节点。
+#### 非递归实现
 
-   ```cpp
-   void postorder_nonrec(TreeNode *root) {
-       TreeNode *last_node = nullptr;
-       std::stack<TreeNode *> nodes;
-       while (root || !nodes.empty()) {
-           while (root) {
-               nodes.push(root);
-               root = root->left;
-           }
-           root = nodes.top();
-           nodes.pop();
-           if (root->right == last_node || root->right == nullptr) {
-               // 右子树已经被访问过或者为空则直接访问当前节点
-               std::cout << root->val << " ";
-               last_node = root;
-               root = nullptr;
-           } else {
-               // 如果右子树还未访问则将当前节点重新压栈然后去访问右子树
-               nodes.push(root);
-               root = root->right;
-           }
-       }
-   }
-   ```
+由于根节点需要在右子树访问完之后才访问，因此需要用一个变量保存上一次访问的节点。
+
+```cpp
+void postorder_nonrec(TreeNode *root) {
+    TreeNode *last_node = nullptr;
+    std::stack<TreeNode *> nodes;
+    while (root || !nodes.empty()) {
+        while (root) {
+            nodes.push(root);
+            root = root->left;
+        }
+        root = nodes.top();
+        nodes.pop();
+        if (root->right == last_node || root->right == nullptr) {
+            // 右子树已经被访问过或者为空则直接访问当前节点
+            std::cout << root->val << " ";
+            last_node = root;
+            root = nullptr;
+        } else {
+            // 如果右子树还未访问则将当前节点重新压栈然后去访问右子树
+            nodes.push(root);
+            root = root->right;
+        }
+    }
+}
+```
 
 ### 层序遍历
 
-层序遍历的规则显然非常适合使用 `BFS` 来完成，因此我们使用队列来完成遍历。
+层序遍历的规则显然非常适合使用 `BFS`，因此我们使用队列来完成遍历。
 
 ```cpp
 void levelorder(TreeNode *root) {
