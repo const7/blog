@@ -23,7 +23,8 @@
     color: $default-color;
     display: inline-block;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2em;
 
     &:hover,
     &:focus {
@@ -35,6 +36,7 @@
     list-style-type: none;
     // margin: 0 0 .7rem 0;
     text-align: center;
+    padding-right: 1rem;
   }
 
   li {
@@ -56,7 +58,7 @@
 
   a {
     color: $default-color;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: $serif-secondary;
   }
 }

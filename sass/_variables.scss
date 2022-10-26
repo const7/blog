@@ -45,10 +45,10 @@ $body-background-color: rgba(0, 0, 0, 0.02) !default;
 $blockquote-text-color: #819198 !default;
 
 // Code
-$inline-code-bg-color: #f7f7f5 !default;
-$block-code-bg-color: #05313b !default;
-$inline-code-text-color: #f06 !default;
-$block-code-text-color: #bebcbc;
+$inline-code-bg-color: #f4f4f4 !default;
+$block-code-bg-color: #f4f4f4 !default;
+$inline-code-text-color: #f91064 !default;
+$block-code-text-color: $default-color;
 
 // Borders
 $border-color: #dce6f0 !default;

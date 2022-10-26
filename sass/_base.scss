@@ -1,6 +1,6 @@
 * {
   @include box-sizing;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 html {
@@ -8,19 +8,18 @@ html {
   text-rendering: optimizeLegibility;
   font-family: $serif-primary;
   /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
+  text-size-adjust: auto;
 }
 
 body {
   font-family: $serif-primary;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.6;
   color: $body-text-color;
   background-color: $body-background-color;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: auto;
   // flex布局
   min-height: 100%;
   display: flex;
