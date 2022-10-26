@@ -9,9 +9,14 @@ $grey: #e5e5e5;
 $shadow-color: rgba(0, 0, 0, .2);
 
 // Fonts
-$serif-primary: "Microsoft YaHei Ui", simsum,Helvetica,sans-serif;
-$serif-secondary: "Microsoft YaHei", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+@font-face {
+  font-family: "OPPOSans";
+  src: url("/assets/fonts/OPPOSans.subset.ttf");
+}
+
+$serif-primary: "OPPOSans", "Microsoft YaHei Ui", Helvetica,sans-serif;
+$serif-secondary: "OPPOSans", "Microsoft YaHei", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$code-font: Consolas, "OPPOSans", "Liberation Mono", Menlo, Courier, monospace;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
