@@ -14,10 +14,15 @@ layout: default
   </div>
 
   {{ content }}
-
+  <div class="table-of-contents">
+    <div class="table-of-contents-title">TOC</div>
+    {% include toc.html html=content %}
+  </div>
 </div>
 
 <!-- valine comment -->
 {% if page.comment==true %}
 <div id="vcomment"></div>
 {% endif %}
+
+

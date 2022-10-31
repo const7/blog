@@ -1,5 +1,5 @@
 ---
-layout: notpost
+layout: post
 title: Markdown 常见用法
 tags: [Markdown]
 description: Markdown 常用语法示例。
@@ -10,16 +10,6 @@ mathjax: true
 包含部分 `Kramdown` 用法，主要方便之后写博客参考。
 
 ---
-
-**目录**
-
-* TOC
-{:toc}
-
-```
-* TOC
-{:toc}
-```
 
 ## 这里是 h2
 

@@ -201,20 +201,27 @@
   //             counter(h5counter) "."
   //             counter(h6counter) ".\0000a0\0000a0";
   // }
+
+  .table-of-contents{
+    font-size: 0.8em;
+    position: fixed;
+    overflow-y: true;
+    padding: 30px 10px;
+    border-left: 2px solid #efefef;
+    width: 15vw;
+    top: 100px;
+    right: 5vw;
+    height: 100%;
+    margin-bottom: 30px;
+    &-title {
+      color: $title-color;
+      font-size: 1.6rem;
+      font-weight: 800;
+      // margin: .8rem 0 .3rem 0;
+      // border-bottom: 1px solid $grey;
+    }
+  }
 }
-
-// Adding '目录' headline to the TOC
-// #markdown-toc::before {
-//   content: "目录";
-//   font-weight: bold;
-// }
-
-// #markdown-toc {
-//   border: 2px solid #aaa;
-//   padding: 0 2em;
-//   list-style: decimal;
-//   display: inline-block;
-// }
 
 // valine comment title
 #vcomment::before {
@@ -223,4 +230,10 @@
   font-weight: bold;
   color: $title-color;
   margin: 0 auto .5rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .table-of-contents {
+    display: none;
+  }
 }

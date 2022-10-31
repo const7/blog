@@ -12,11 +12,6 @@ comment: true
 
 ---
 
-**目录**
-
-* TOC
-{:toc}
-
 ## 数据结构定义
 
 ```cpp

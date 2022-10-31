@@ -11,11 +11,6 @@ comment: true
 
 ---
 
-**目录**
-
-* toc
-{:toc}
-
 > 当前版本: Ubuntu 20.04，默认桌面环境：GNOME
 
 ## 基本介绍

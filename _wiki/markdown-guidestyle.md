@@ -1,5 +1,5 @@
 ---
-layout: notpost
+layout: post
 title: Markdown 编写规范
 tags: [Markdown]
 description: Markdown 常用语法示例。
@@ -13,11 +13,6 @@ mathjax: false
 - [mzlogin/chinese-copywriting-guidelines](https://github.com/mzlogin/chinese-copywriting-guidelines)
 
 -----
-
-**目录**
-
-* TOC
-{:toc}
 
 ## 说明
 

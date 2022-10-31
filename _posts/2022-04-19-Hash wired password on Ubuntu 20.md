@@ -11,11 +11,6 @@ comment: true
 
 ---
 
-**TOC**
-
-* toc
-{:toc}
-
 > Current os version: Ubuntu 20.04 focal
 
 ## Install ifupdown
