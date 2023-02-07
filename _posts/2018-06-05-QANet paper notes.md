@@ -10,6 +10,8 @@ comment: true
 
 目前的端到端机器阅读和问答模型主要基于包含注意力的循环神经网络，在训练和推理方面效率较低。论文提出了一种名为 QANet 的问答架构，它的编码器仅由卷积和自注意力 (self-attention) 组成，其中卷积对局部交互和自注意力模型的全局交互进行建模。QAnet在 SQuAD 数据集上的模型训练速度、推理速度以及 F1 值都有明显提升。
 
+> 原始论文：[QANet: Combining Local Convolution With Global Self-Attention For Reading Comprehension](https://openreview.net/pdf?id=B14TlG-RW) [CMU & Google]
+
 ---
 
 ## Introduction
@@ -181,12 +183,7 @@ $$
 
 > 对测试集进行预测时，span(s, e) 的选取规则是：$p_s^1$、$p_e^2$ 最大且 $s\leq e$。
 
-
-## 原始论文：
-
-[QANet: Combining Local Convolution With Global Self-Attention For Reading Comprehension](https://openreview.net/pdf?id=B14TlG-RW)[CMU & Google]
-
-## 参考文献：
+## Reference
 
 [1] Seo, Minjoon, et al. "Bidirectional attention flow for machine comprehension." arXiv preprint arXiv:1611.01603 (2016).
 
@@ -196,18 +193,16 @@ $$
 
 [4] He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
 
-## 参考博客：
+[5] [深度学习中的注意力机制](https://blog.csdn.net/TG229dvt5I93mxaQ5A6U/article/details/78422216)
 
-[1] [深度学习中的注意力机制](https://blog.csdn.net/TG229dvt5I93mxaQ5A6U/article/details/78422216)
+[6] [详解深度学习中的 Normalization，不只是 BN](https://zhuanlan.zhihu.com/p/33173246)
 
-[2] [详解深度学习中的 Normalization，不只是 BN](https://zhuanlan.zhihu.com/p/33173246)
+[7] [《Attention is All You Need》浅读（简介+代码）](https://kexue.fm/archives/4765)
 
-[3] [《Attention is All You Need》浅读（简介+代码）](https://kexue.fm/archives/4765)
-
-[4] [论文笔记 - Fast and Accurate Reading Comprehension by Combining Self-Attention and Convolution](http://www.shuang0420.com/2018/03/25/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Fast%20and%20Accurate%20Reading%20Comprehension%20by%20Combining%20Self-Attention%20and%20Convolution/)
+[8] [论文笔记 - Fast and Accurate Reading Comprehension by Combining Self-Attention and Convolution](http://www.shuang0420.com/2018/03/25/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Fast%20and%20Accurate%20Reading%20Comprehension%20by%20Combining%20Self-Attention%20and%20Convolution/)
 
 ## 附：
 
-Tensorflow实现：https://github.com/NLPLearn/QANet
+Tensorflow实现：[https://github.com/NLPLearn/QANet](https://github.com/NLPLearn/QANet)
 
-Pytorch实现：https://github.com/hengruo/QANet-pytorch
+Pytorch实现：[https://github.com/hengruo/QANet-pytorch](https://github.com/hengruo/QANet-pytorch)
