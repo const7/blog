@@ -75,3 +75,12 @@
     }
   }
 }
+
+// hide scrollbar
+.hide-scrollbar {
+  ::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
