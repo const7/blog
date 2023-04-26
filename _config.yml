@@ -36,8 +36,8 @@ kramdown:
   # set toc levels
   toc_levels: 1..3
 
-# 5 posts per page
-paginate:       5
+# 7 posts per page
+paginate:       7
 paginate_path:  "p-:num"
 
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock']
