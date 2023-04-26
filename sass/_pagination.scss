@@ -7,7 +7,7 @@
 
   span {
     color: $default-color;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .top {
@@ -24,8 +24,9 @@
 
   .arrow {
     // @include transition(all .3s ease-out);
-    color: $default-color;
+    // color: $default-color;
     position: absolute;
+    font-style: italic;
 
     &:hover,
     &:focus {

@@ -24,28 +24,18 @@ title: Blog
 
 <!-- setting pagination -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-    <span>&laquo; Prev</span>
-    {% endif %}
+    <div class="pagination">
+        <!-- previous page -->
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="left arrow">&laquo; Prev</a>
+        {% endif %}
 
-    {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <span>{{ page }}</span>
-    {% elsif page == 1 %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page
-        }}</a>
-    {% endif %}
-    {% endfor %}
+        <!-- current_page / total_pages -->
+        <span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
 
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-    <span>Next &raquo;</span>
-    {% endif %}
-</div>
+        <!-- next page -->
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="right arrow">Next &raquo;</a>
+        {% endif %}
+    </div>
 {% endif %}
