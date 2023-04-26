@@ -141,10 +141,10 @@ _斜体_
 
 ## 图片
 
-![QANet 模型结构](assets/images/2018-06-05-01.png){:height="50%" width="50%"}_图 1 QANet 模型结构_
+![QANet 模型结构](/assets/images/2018-06-05-01.png){:height="50%" width="50%"}_图 1 QANet 模型结构_
 
 ```
-![QANet 模型结构](assets/images/2018-06-05-01.png){:height="50%" width="50%"}_图 1 QANet 模型结构_
+![QANet 模型结构](/assets/images/2018-06-05-01.png){:height="50%" width="50%"}_图 1 QANet 模型结构_
 
 // {:height="50%" width="50%"}可用于图片放缩（kramdown自带）
 // 阿里云oss自带放缩会同时压缩画质
