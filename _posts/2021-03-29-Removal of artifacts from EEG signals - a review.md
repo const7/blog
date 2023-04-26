@@ -19,13 +19,13 @@ comment: true
 
 EEG 频率范围一般 0.1Hz - 100Hz，可以分为五个频段，下面列了四种常见频段。
 
-![image-20210406173110977](https://cloud.chenkun.pro/img/image-20210406173110977.png)
+![image-20210406173110977](assets/images/image-20210406173110977.png)
 
 ### 常见伪迹类型
 
 这里主要指生理伪迹（区别于仪器误差），下面列出几种常见信号特征。
 
-![image-20210406173928986](https://cloud.chenkun.pro/img/image-20210406173928986.png)
+![image-20210406173928986](assets/images/image-20210406173928986.png)
 
 #### Ocular Artifacts
 
@@ -88,7 +88,7 @@ EEG source imaging (ESI) is a model-based imaging technique that combines tempor
 
 见图
 
-![image-20210406230051091](https://cloud.chenkun.pro/img/image-20210406230051091.png)
+![image-20210406230051091](assets/images/image-20210406230051091.png)
 
 ## 结论
 

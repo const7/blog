@@ -26,7 +26,7 @@ comment: true
 sudo fdisk -l
 ```
 
-![查看所有硬盘](https://cloud.chenkun.pro/img/2018-04-27-01.png){:height="70%" width="70%"}_查看所有可用硬盘_
+![查看所有硬盘](assets/images/2018-04-27-01.png){:height="70%" width="70%"}_查看所有可用硬盘_
 
 ### 格式化
 
@@ -36,7 +36,7 @@ sudo fdisk -l
 sudo mkfs.ext4 /dev/vdd
 ```
 
-![初始化云盘](https://cloud.chenkun.pro/img/2018-04-27-02.png){:height="70%" width="70%"}_初始化云盘_
+![初始化云盘](assets/images/2018-04-27-02.png){:height="70%" width="70%"}_初始化云盘_
 
 ### 挂载
 
@@ -52,7 +52,7 @@ sudo mount -t ext4 /dev/vdd /home/ubuntu/qa_test
 df -h
 ```
 效果：
-![查看挂载结果](https://cloud.chenkun.pro/img/2018-04-27-03.png){:height="70%" width="70%"}_查看挂载结果_
+![查看挂载结果](assets/images/2018-04-27-03.png){:height="70%" width="70%"}_查看挂载结果_
 
 ### 更改目录所属组及所有者
 
