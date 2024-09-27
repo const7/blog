@@ -11,6 +11,7 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{site.time | date_to_rfc822}}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
+    <follow_challenge><feedId>62325214194177024</feedId><userId>58564376824259584</userId></follow_challenge>
     <atom:link href="{{ site.domainUrl | append: site.baseurl }}/assets/xml/rss.xml" rel="self" type="application/rss+xml" />
     {% for post in site.posts %}
     <item>
