@@ -67,6 +67,28 @@ vncconfig -iconic &
 gnome-session --session=gnome-flashback-metacity --disable-acceleration-check &
 ```
 
+> 2025-04-25 更新：
+> 如果是用的 KDE 可参考如下配置：
+> 1. 确保安装了必需的包
+> ```shell
+> sudo apt install plasma-workspace plasma-desktop dbus-x11 xorg
+> ```
+> 2. 配置文件 `~/.vnc/xstartup` 内容如下：
+> ```shell
+> #!/bin/sh
+> unset SESSION_MANAGER
+> unset DBUS_SESSION_BUS_ADDRESS
+> # 一些 KDE 环境变量，确保 Plasma 识别到这是 X11 会话
+> export XDG_CURRENT_DESKTOP=KDE
+> export XDG_SESSION_TYPE=x11
+> # 如有 ~/.Xresources，则加载（可选）
+> [ -r "$HOME/.Xresources" ] && xrdb "$HOME/.Xresources"
+> # （可选）让剪贴板在客户端和服务端同步
+> vncconfig -iconic &
+> # 启动 Plasma，且用 exec 保证脚本不提前退出
+> exec dbus-launch --exit-with-session startplasma-x11
+> ```
+
 > 配置这里是最坑的，配置有问题很容易在启动后碰到黑屏灰屏等奇奇怪怪的状况，而且 log 基本没什么参考价值。关于配置文件一些细节跟注意事项可参考 [VNC server配置](https://segmentfault.com/a/1190000022707961)。
 
 ## 运行
